@@ -1,0 +1,7 @@
+{
+  "name": "myselfHotel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
