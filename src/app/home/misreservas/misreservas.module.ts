@@ -1,0 +1,25 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
+import { MisreservasPageRoutingModule } from './misreservas-routing.module';
+import { MisreservasPage } from './misreservas.page';
+import { ComponentsModule } from 'src/app/components/components.module';
+import { AvataruserComponent } from 'src/app/components/avataruser/avataruser.component';
+import { SaveBookComponent } from 'src/app/components/save-book/save-book.component';
+
+@NgModule({
+  entryComponents: [
+    AvataruserComponent,
+    SaveBookComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    MisreservasPageRoutingModule,
+    ComponentsModule
+  ],
+  declarations: [MisreservasPage]
+})
+export class MisreservasPageModule {}

@@ -1,20 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title class="ion-text-center">
+      Myself Hotel
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="getstart">
+  <ion-card class="ion-align-self-auto getstart">
+    <ion-img src="../assets/img/logo.svg" class="icon ion-margin"></ion-img>
+    <ion-card-content class="ion-align-self-center">
+      <span class="already">Sos nuevo?</span>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-button [routerLink]="['/registration']" expand="block" color="secondary">Registrarse</ion-button>
+
+      <span class="divider line one-line">ó</span>
+
+      <span class="already">Ya sos Usuario?</span>
+
+      <ion-button [routerLink]="['/login']" expand="block" color="danger">Ingresar</ion-button>
+      <ion-button (click)="onLoginFB()" expand="block" color="primary">Ingresar con <ion-icon name="logo-facebook">
+        </ion-icon>
+      </ion-button>
+      <ion-button (click)="onLoginGoogle()" expand="block" color="success">Ingresar con <ion-icon name="logo-google">
+        </ion-icon>
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>

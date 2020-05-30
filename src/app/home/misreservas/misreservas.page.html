@@ -1,0 +1,23 @@
+<app-header titulo="Mis Reservas"></app-header>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="warning" (click)="nuevaRva(idUser)">
+    <ion-icon name="add" ></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-content *ngIf="!!books?.length == 0">
+  <h2 class="ion-padding">Carga tu primer reserva!</h2>
+</ion-content>
+<ion-content *ngIf="books">
+  <ion-list *ngFor="let book of books">
+    <ion-item>
+      <ion-label>
+        <h1>{{book.ota}}</h1>
+        <h2>Cod. Reserva: {{book.pnr}}</h2>
+        <h3>Titular: {{book.tit}}</h3>
+        <p>Ingreso: {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br> Salida: {{book.co.toDate() | date:'dd/MM/yyyy'}}</p>
+      </ion-label>
+      <!-- <ion-icon name="create" slot="end" (click)="modificarRva(book)" color="primary" ></ion-icon> POR EL MOMENTO NO se puede Modificar -->
+      <ion-icon name="trash" slot="end" (click)="eliminarRva(book.id)" color="danger" ></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

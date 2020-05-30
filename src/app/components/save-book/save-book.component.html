@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="warning">
+    <ion-title class="ion-text-center">
+      Datos de nueva Reserva
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- <form name="bookForm" #bookForm="ngForm" (ngSubmit)="guardarCambios(bookForm)"> -->
+  <input type="hidden" name="id" [(ngModel)]="book.id">
+  <ion-card color="warning" class="ion-margin-vertical">
+    <ion-card-content class="ion-margin-vertical">
+      <ion-item>
+        <ion-label>Titular de la Rva: </ion-label>
+        <br>
+        <ion-input type="text" name="tit" [(ngModel)]="book.tit"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Agencia Online: </ion-label>
+        <br>
+        <ion-input type="text" name="ota" [(ngModel)]="book.ota"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Código de la reserva: </ion-label>
+        <br>
+        <ion-input type="text" name="pnr" [(ngModel)]="book.pnr"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha de Ingreso: </ion-label>
+        <br>
+        <ion-input type="date" name="ci" [(ngModel)]="book.ci"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha de Salida: </ion-label>
+        <br>
+        <ion-input type="date" name="co" [(ngModel)]="book.co"></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <input type="hidden" name="uid" [(ngModel)]="idUser">
+
+  </ion-card>
+  <ion-button color="warning" expand="block" class="ion-margin-bottom" (click)="guardarCambios()">Guardar Reserva
+  </ion-button>
+  <ion-button color="danger" expand="block" (click)="closeModal()">Volver sin Guardar Cambios</ion-button>
+  <!-- </form> -->
+</ion-content>

@@ -1,0 +1,23 @@
+[
+    {
+        "icon": "logo-usd",
+        "name": "Mis Consumos",
+        "redirecTo": "/"
+    },
+    {
+        "icon": "checkmark-circle",
+        "name": "CHECK OUT",
+        "redirecTo": "/"
+    },
+    {
+        "icon": "information-circle",
+        "name": "Info Util",
+        "redirecTo": "/"
+    },
+    {
+        "icon": "chatbubbles",
+        "name": "Comentarios",
+        "redirecTo": "/"
+    }
+
+]

@@ -24,3 +24,28 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.override-default-form-input{
+    width: 100% !important;
+    border: 1px solid #ffe600;
+    border-radius: .5rem;
+    margin-top: 16px;
+
+}
+:root {
+    --ion-color-warning: #5fd1ad;
+    --ion-color-warning-rgb: 95,209,173;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0,0,0;
+    --ion-color-warning-shade: #54b898;
+    --ion-color-warning-tint: #6fd6b5;
+  }
+  .tester{
+    text-align: center;
+}

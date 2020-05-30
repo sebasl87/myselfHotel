@@ -1,0 +1,12 @@
+<ion-card>
+  <ion-card-content>
+
+      <ion-label class="text-wrap">Model:</ion-label>
+      <ion-input type="text" [(ngModel)]="mod"></ion-input>
+
+      <ion-label class="text-wrap">Patente:</ion-label>
+      <ion-input type="text" [(ngModel)]="patente"></ion-input>
+
+  </ion-card-content>
+  <ion-button expand="block" (click)="enviarAuto()" color="warning">Guardar Auto</ion-button>
+</ion-card>

@@ -1,15 +1,46 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+import { NoLoginGuard } from "./guards/no-login.guard";
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    children:[
+      {
+      path:"",
+      loadChildren: () => import('./home/home.module').then( m => m.HomePageModule), canActivate: [NoLoginGuard]
+      },
+      {
+        path:"index",
+        loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule), canActivate: [AuthGuard]
+      },
+      {
+        path: 'misdatos/:id',
+        loadChildren: () => import('./home/misdatos/misdatos.module').then( m => m.MisdatosPageModule)
+      },
+      {
+        path: 'misreservas/:id',
+        loadChildren: () => import('./home/misreservas/misreservas.module').then( m => m.MisreservasPageModule)
+      },
+      {
+        path: 'checkin/:id',
+        loadChildren: () => import('./home/checkin/checkin.module').then( m => m.CheckinPageModule)
+      }
+    ]
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule), canActivate : [NoLoginGuard]
+  },
+  {
+    path: 'registration',
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule), canActivate : [NoLoginGuard]
   },
 ];
 

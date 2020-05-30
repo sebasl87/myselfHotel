@@ -1,0 +1,16 @@
+<ion-card>
+  <ion-card-content>
+
+      <ion-label class="text-wrap">Nombre Completo:</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+
+
+      <ion-label class="text-wrap">Fecha Nac.:</ion-label>
+      <ion-input type="text" [(ngModel)]="date"></ion-input>
+
+      <ion-label class="text-wrap">Documento:</ion-label>
+      <ion-input type="number" [(ngModel)]="dni"></ion-input>
+
+  </ion-card-content>
+  <ion-button expand="block" (click)="enviarAcomp()" color="warning">Guardar Acompañante</ion-button>
+</ion-card>
