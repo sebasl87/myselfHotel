@@ -6,7 +6,6 @@
         "yasos": "Ya sos Usuario?",
         "ingresar": "Ingresar",
         "ingresarcon": "Ingresar con"
-
     },
     "REGISTRATION":{
         "registrarse": "Registrarse",
@@ -64,7 +63,7 @@
         "vtotc": "Vencimiento:",
         "codtc": "Cod Seg",
         "enviar": "Realizar App Check In",
-        "excelente": "Excelente! Su Reserva ya se encuentra checkeada!",
+        "excelente": "Excelente! App Check In confirmado!",
         "loesperamos": "Le esperamos en nuestro hotel para hacer de su estadía el mejor de los momentos.",
         "detalle": "Detalles de su reserva!",
         "medio": "Medio:",
