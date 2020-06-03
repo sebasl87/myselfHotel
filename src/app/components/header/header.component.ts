@@ -40,18 +40,14 @@ export class HeaderComponent implements OnInit {
     });
     await popover.present();
     const { data } = await popover.onWillDismiss();
-
+    
     if (data.func == 1) {
       this.authSvc.getUserAuth().subscribe(user => {
         this.uid = user.uid;
         this.router.navigate(['home/misdatos/', this.uid])
 
       })
-      // this.storage.get('uid').then(val => {
-      //     this.router.navigate(['home/misdatos/', val])
-
-      // })
-
+      
     } else {
       this.authSvc.logout();
     }

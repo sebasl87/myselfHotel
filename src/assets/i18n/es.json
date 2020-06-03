@@ -81,6 +81,9 @@
         "nombre": "Nombre Completo:",
         "guardar": "Guardar Acompañante"
     },
+    "AVATAR":{
+        "cerrar": "Cerrar"
+    },
     "NEWAUTO":{
         "patente": "Patente",
         "guardar": "Guardar Auto"
