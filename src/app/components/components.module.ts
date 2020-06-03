@@ -13,6 +13,7 @@ import { SaveBookComponent } from './save-book/save-book.component';
 import { TerminosComponent } from './terminos/terminos.component';
 import { QrComponent } from './qr/qr.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -44,7 +45,9 @@ import { QRCodeModule } from 'angularx-qrcode';
     IonicModule,
     FormsModule,
     RouterModule,
-    QRCodeModule
+    QRCodeModule,
+    TranslateModule.forChild()
+
   ]
 })
 export class ComponentsModule { }

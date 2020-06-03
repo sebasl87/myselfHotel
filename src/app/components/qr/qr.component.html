@@ -5,26 +5,26 @@
 </ion-fab>
 <ion-content *ngIf="QRCI" [fullscreen]="true" class="ion-padding">
   <qrcode [qrdata]="QRCI" [width]="256" [errorCorrectionLevel]="'M'" [cssClass]="'tester'"></qrcode>
-  <h1>Excelente! Su reserva ya se encuentra checkeada</h1>
-  <h3>Le esperamos en nuestro hotel para hacer de su estadía el mejor de los momentos.</h3>
+  <h1>{{'CI.excelente' | translate }}</h1>
+  <h3>{{'CI.loesperamos' | translate }}</h3>
   <ion-card color="warning">
-    <ion-card-title class="ion-padding">Detalles de su reserva!</ion-card-title>
+    <ion-card-title class="ion-padding">{{'CI.detalle' | translate }}</ion-card-title>
     <ion-card-content>
       <ion-item>
-        <ion-label>Rva:</ion-label>
+        <ion-label>{{'MISRESERVAS.cod' | translate }}</ion-label>
         <p>{{bookCh.pnr}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Agencia:</ion-label>
+        <ion-label>{{'CI.medio' | translate }}</ion-label>
         <p>{{bookCh.ota}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Titular:</ion-label>
+        <ion-label>{{'MISRESERVAS.tit' | translate }}</ion-label>
         <p>{{bookCh.tit}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Fechas:</ion-label>
-        <p>Ingreso: {{bookCh.ci.toDate() | date:'dd/MM/yyyy'}} <br> Salida: {{bookCh.co.toDate() | date:'dd/MM/yyyy'}}
+        <ion-label>{{'CI.fechas' | translate }}</ion-label>
+        <p>{{'MISRESERVAS.in' | translate }} {{bookCh.ci.toDate() | date:'dd/MM/yyyy'}} <br> {{'MISRESERVAS.out' | translate }} {{bookCh.co.toDate() | date:'dd/MM/yyyy'}}
         </p>
       </ion-item>
 

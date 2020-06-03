@@ -8,13 +8,12 @@ import { PopoverController } from '@ionic/angular';
 })
 export class AvataruserComponent implements OnInit {
 
-  items = Array({icon: 'person', label:'Mis Datos', func: '1'}, {icon:'close-circle', label:'Cerrar',func: '2'});
   constructor(private popoverCtrl : PopoverController) { }
 
   ngOnInit() {}
   
 
-  onClick( valor){
+  onClick(valor){
     this.popoverCtrl.dismiss({
       func: valor
     });

@@ -10,6 +10,7 @@ import { IndexPage } from './index.page';
 import { AvataruserComponent } from 'src/app/components/avataruser/avataruser.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { QrComponent } from 'src/app/components/qr/qr.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -23,7 +24,9 @@ import { QrComponent } from 'src/app/components/qr/qr.component';
     FormsModule,
     IonicModule,
     IndexPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    TranslateModule.forChild()
+
   ],
   declarations: [IndexPage]
 })

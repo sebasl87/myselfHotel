@@ -1,0 +1,104 @@
+{
+    "HOME":{
+        "nuevo": "Você é novo?",
+        "registrarse": "Registro",
+        "o": "ou",
+        "yasos": "Você já é usuário?",
+        "ingresar": "Entrar",
+        "ingresarcon": "Entrar com"
+    },
+    "REGISTRATION":{
+        "registrarse": "Registro",
+        "nombre": "Nome",
+        "guardar":"Salve"
+    },
+    "LOGIN":{
+        "olvidecontra": "Lembrar senha",
+        "escribirmail": "Escreva seu email para enviar as instruções para recuperar sua senha.",
+        "enviarlink": "Enviar Link"
+    },
+    "INDEX":{
+        "hola": "Olá",
+        "xfafoto": "Faça o upload de uma foto do seu documento para se identificar.",
+        "rvaappch": "Reserva APP Checkin",
+        "qr": "Clique para ter QR",
+        "cod": "Código:",
+        "paso0": "Passos para fazer seu App Check In",
+        "paso1": "1- Por favor, preencha todos os seus dados e os dos acompanhantes. Não se esqueça de enviar a foto do seu documento para poder avançar.",
+        "paso2": "2- Carregue os detalhes da sua reserva para verificar.",
+        "paso3": "3- Confirme os 4 níveis do aplicativo para obter seu código de acesso.",
+        "paso4": "4- Com o código, basta ir até a recepção para pegar sua chave e aproveitar sua estadia."
+    },
+    "MISDATOS":{
+        "titulo": "Meus Dados",
+        "nacionalidad": "Nacionalidade",
+        "fnac": "Data de Nascimento",
+        "sexo": "Sexo",
+        "acomp": "Acompanhante/s",
+        "auto": "Veículo",
+        "misdatos": "Modificar Meus Dados"
+    },
+    "MISRESERVAS":{
+        "titulo": "Minhas Reservas",
+        "primerrva": "Complete sua primeira reserva!",
+        "cod": "Cod. Reserva:",
+        "tit": "Titular:",
+        "in": "Entrada:",
+        "out": "Saída:"
+    },
+    "CI":{
+        "datos": "Dados de Passageiros",
+        "subtdatos": "Verifique todos os dados ou modifique-os em 'Meus dados'",
+        "dni": "Passaporte",
+        "aceptodatos": "Aceito e confirmo que os dados enviados correspondem à minha reserva.",
+        "reserva": "Dados de Reserva",
+        "subtrva": "Selecione a reserva para verificar ou adicioná-la anteriormente em 'Minhas Reservas'",
+        "subtterm": "Leia e aceite nossos Termos e Condições, realize o manual e DDJJ da COVID-19",
+        "leer": "Ler",
+        "aceptoterm": "Aceito os Termos e Condições, conduzo o manual e DDJJ da COVID-19.",
+        "tc": "Dados do cartão de crédito da garantia.",
+        "subttc": "Solicitamos os detalhes do seu cartão de crédito apenas como garantia. Não cobraremos nada se você não precisar no momento do check-out.",
+        "tittc": "Titular do Cartão",
+        "numtc": "Número do Cartão",
+        "vtotc": "Expiração:",
+        "codtc": "Cod Seg",
+        "enviar": "Fazer App Check In",
+        "excelente": "Excelente! Sua reserva já está marcada!",
+        "loesperamos": "Esperamos por você no nosso hotel para tornar a sua estadia a melhor experiência.",
+        "detalle": "Detalhes da sua reserva!",
+        "medio": "Meio:",
+        "fechas": "Datas:",
+        "reci": "Refazer Check In"
+    },
+    "MENU":{
+        "menu": "Menú",
+        "misconsumos": "Meus Gastos",
+        "info": "Informações úteis",
+        "comentarios": "Comentários"
+    },
+    "NEWACOMP":{
+        "nombre": "Nome Completo:",
+        "guardar": "Salvar Acompanhante"
+    },
+    "AVATAR":{
+        "cerrar": "Fechar"
+    },
+    "NEWAUTO":{
+        "patente": "Patente",
+        "guardar": "Salvar Carro"
+    },
+    "NEWRVA":{
+        "titulo": "Dados de nova Reserva",
+        "tit": "Titular da Rva:",
+        "medio": "Meio/Agência/Companhia/Online:",
+        "cod":"Código da Reserva:",
+        "in": "Data de Entrada:",
+        "out": "Data de Saída:",
+        "guardar": "Salvar Reserva",
+        "volver": "Retorna sem modificações"
+    },
+    "UPDATEUSER":{
+        "titulo": "Modificar Dados",
+        "guardar": "Salvar Modificações"
+    }
+}

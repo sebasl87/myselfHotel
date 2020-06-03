@@ -3,14 +3,14 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">Ingresar</ion-title>
+    <ion-title class="ion-text-center">{{'HOME.ingresar' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
   <ion-row>
     <ion-col>
-      <ion-img src="../assets/img/logo.jpg" class="icon ion-margin"></ion-img>
+      <ion-img src="../assets/img/logo.svg" class="icon ion-margin"></ion-img>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
         <ion-input type="Email" [(ngModel)]="user.email"></ion-input>
@@ -20,11 +20,11 @@
         <ion-input type="Password" [(ngModel)]="user.password"></ion-input>
       </ion-item>
         <ion-button color="danger" (click)="userLogin()" expand="block">
-          Ingresar
+          {{'HOME.ingresar' | translate }}
         </ion-button>
     </ion-col>
   </ion-row>
   <div class="ion-text-center ion-margin-top">
-    <a routerLink="./reset-pass"><small>Olvidé mi Contraseña</small></a>
+    <a routerLink="./reset-pass"><small>{{'LOGIN.olvidecontra' | translate }}</small></a>
   </div>
 </ion-content>
