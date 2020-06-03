@@ -9,6 +9,7 @@ import { AvataruserComponent } from 'src/app/components/avataruser/avataruser.co
 import { TerminosComponent } from 'src/app/components/terminos/terminos.component';
 import { IonCustomFormBuilderModule } from 'ion-custom-form-builder';
 import { QRCodeModule } from 'angularx-qrcode';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { QRCodeModule } from 'angularx-qrcode';
     CheckinPageRoutingModule,
     ComponentsModule,
     QRCodeModule,
-    IonCustomFormBuilderModule.forRoot({ defaultCssClass: 'override-default-form-input' })
+    IonCustomFormBuilderModule.forRoot({ defaultCssClass: 'override-default-form-input' }),
+    TranslateModule.forChild()
+
   ],
   declarations: [CheckinPage]
 })

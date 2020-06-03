@@ -1,17 +1,17 @@
 <app-header titulo="Myself Hotel"></app-header>
 <ion-content>
-    <h2 class="ion-padding">Hola {{name}}</h2>
+    <h2 class="ion-padding">{{'INDEX.hola' | translate}} {{name}}</h2>
     <ion-item *ngIf="!foto" (click)="takePhoto()">
         <ion-text color="danger">
-            <h2 class="ion-padding-start">Por favor carga una foto de tu documento para identificarte.</h2>
+            <h2 class="ion-padding-start">{{'INDEX.xfafoto' | translate }}</h2>
         </ion-text>
     </ion-item>
     <ion-card *ngIf="booksCH">
         <ion-card-content *ngFor="let bookCH of booksCH">
-            <ion-card-title> Reserva APP Checkeada</ion-card-title>
-            <ion-card-subtitle>Clickea para ver QR</ion-card-subtitle>
+            <ion-card-title>{{'INDEX.rvaappch' | translate }}</ion-card-title>
+            <ion-card-subtitle>{{'INDEX.qr' | translate }}</ion-card-subtitle>
             <ion-item (click)="mostrarQR(bookCH.id)" color="success">
-                <p> Código: {{bookCH.pnr}} - {{bookCH.ota}}</p>
+                <p> {{'INDEX.cod' | translate }} {{bookCH.pnr}} - {{bookCH.ota}}</p>
                 <p>CI: {{bookCH.ci.toDate() | date:'dd/MM/yyyy'}} // CO: {{bookCH.co.toDate() | date:'dd/MM/yyyy'}}
             </ion-item>
         </ion-card-content>
@@ -19,30 +19,27 @@
 
     </ion-card>
     <ion-card class="ion-padding" *ngIf="!!booksCH?.length == 0">
-        <ion-card-title>Simples pasos para tu App Check in</ion-card-title>
+        <ion-card-title>{{'INDEX.paso0' | translate }}</ion-card-title>
         <ion-card-content>
             <ion-item>
 
-                <ion-text>1- Completa por favor todos tus datos y los de los de los acompañantes. No olvides subir la
-                    foto de tu documento para poder avanzar.</ion-text>
+                <ion-text>{{'INDEX.paso1' | translate }}</ion-text>
             </ion-item>
             <ion-item>
 
-                <ion-text>2- Subir los detalles de tu reserva a chequear.</ion-text>
+                <ion-text>{{'INDEX.paso2' | translate }}</ion-text>
             </ion-item>
             <ion-item>
 
-                <ion-text>3- Confirma los 4 niveles del app check in para obtener tu código de acceso.</ion-text>
+                <ion-text>{{'INDEX.paso3' | translate }}</ion-text>
             </ion-item>
             <ion-item>
 
-                <ion-text>4- Con el código solo dirijase a recepción para obtener su llave y disfrutar de su estadía.
+                <ion-text>{{'INDEX.paso4' | translate }}
                 </ion-text>
             </ion-item>
         </ion-card-content>
     </ion-card>
-
-
 
     <ion-slides [options]="slideOptsOne" class="ion-no-padding">
         <ion-slide *ngFor="let s of sliders">

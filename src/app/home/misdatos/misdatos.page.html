@@ -1,4 +1,4 @@
-<app-header titulo="Mis Datos"></app-header>
+<app-header titulo="{{'MISDATOS.titulo' | translate }}"></app-header>
 
 <ion-content>
   <ion-card  color="warning">
@@ -16,20 +16,20 @@
         <p>  {{user.mail}} </p>
       </ion-item>
       <ion-item>
-        <ion-label>Nacionalidad</ion-label>
+        <ion-label>{{'MISDATOS.nacionalidad' | translate }}</ion-label>
         <p> {{user.nac}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Fecha Nac.</ion-label>
+        <ion-label>{{'MISDATOS.fnac' | translate }}</ion-label>
         <p>  {{user.date}} </p>
       </ion-item>
       <ion-item>
-        <ion-label>Sexo</ion-label>
+        <ion-label>{{'MISDATOS.sexo' | translate }}</ion-label>
         <p> {{user.sexo}}</p>
       </ion-item>
       <ion-item-divider>
         <ion-label slot="start">
-          Acompañantes
+          {{'MISDATOS.acomp' | translate }}
         </ion-label>
         <ion-icon slot="end" name="add-circle" (click)="newAcomp($event)" color="primary" class="ion-margin-end"></ion-icon>
       </ion-item-divider>
@@ -42,7 +42,7 @@
       </ion-item>
       <ion-item-divider>
         <ion-label>
-          Vehículo
+          {{'MISDATOS.auto' | translate }}
         </ion-label>
         <ion-icon slot="end" name="add-circle" (click)="newAuto($event)" color="primary" class="ion-margin-end"></ion-icon>
       </ion-item-divider>
@@ -53,5 +53,5 @@
       </ion-item>
     </ion-card>
   </ion-card>
-  <ion-button expand="block" color="warning" (click)="onPreUpdateUser(usuario)">Modificar Mis Datos</ion-button>
+  <ion-button expand="block" color="warning" (click)="onPreUpdateUser(usuario)">{{'MISDATOS.misdatos' | translate }}</ion-button>
 </ion-content>

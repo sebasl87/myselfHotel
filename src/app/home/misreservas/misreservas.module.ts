@@ -7,6 +7,7 @@ import { MisreservasPage } from './misreservas.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { AvataruserComponent } from 'src/app/components/avataruser/avataruser.component';
 import { SaveBookComponent } from 'src/app/components/save-book/save-book.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   entryComponents: [
@@ -18,7 +19,9 @@ import { SaveBookComponent } from 'src/app/components/save-book/save-book.compon
     FormsModule,
     IonicModule,
     MisreservasPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    TranslateModule.forChild()
+
   ],
   declarations: [MisreservasPage]
 })

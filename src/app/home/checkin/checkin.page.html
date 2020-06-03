@@ -2,16 +2,16 @@
 <ion-content *ngIf="!QRCI">
   <ion-card class="ion-padding">
     <ion-label>
-      <h2>Datos de Pasajeros</h2>
-      <p>Chequear todos los datos o modificarlos desde "Mis Datos"</p>
+      <h2>{{'CI.datos' | translate }}</h2>
+      <p>{{'CI.subtdatos' | translate }}</p>
     </ion-label>
     <ion-card class="ion-text-wrap">
       <ion-item>
-        <ion-label class="ion-no-padding">Nombre</ion-label>
+        <ion-label class="ion-no-padding">{{'REGISTRATION.nombre' | translate }}</ion-label>
         <p> {{user.name}} </p>
       </ion-item>
       <ion-item>
-        <ion-label>Documento</ion-label>
+        <ion-label>{{'CI.dni' | translate }}</ion-label>
         <p> {{user.dni}} </p>
       </ion-item>
       <ion-item>
@@ -23,20 +23,20 @@
         <p> {{user.mail}} </p>
       </ion-item>
       <ion-item>
-        <ion-label>Nacionalidad</ion-label>
+        <ion-label>{{'MISDATOS.nacionalidad' | translate }}</ion-label>
         <p> {{user.nac}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Fecha Nac.</ion-label>
+        <ion-label>{{'MISDATOS.fnac' | translate }}</ion-label>
         <p> {{user.date}} </p>
       </ion-item>
       <ion-item>
-        <ion-label>Sexo</ion-label>
+        <ion-label>{{'MISDATOS.sexo' | translate }}</ion-label>
         <p> {{user.sexo}}</p>
       </ion-item>
       <ion-item-divider>
         <ion-label slot="start">
-          Acompañantes
+          {{'MISDATOS.acomp' | translate }}
         </ion-label>
       </ion-item-divider>
       <ion-item *ngFor="let p of user.comp">
@@ -46,7 +46,7 @@
       </ion-item>
       <ion-item-divider>
         <ion-label>
-          Vehículo
+          {{'MISDATOS.auto' | translate }}
         </ion-label>
       </ion-item-divider>
       <ion-item *ngFor="let auto of user.auto">
@@ -54,23 +54,23 @@
         <p> {{auto.patente}}</p>
       </ion-item>
       <ion-item>
-        <p>Acepto y confirmo que los datos enviados corresponden a mi reserva.</p>
+        <p>{{'CI.aceptodatos' | translate }}</p>
         <ion-checkbox slot="end" (click)="datosCh(1)"></ion-checkbox>
       </ion-item>
     </ion-card>
   </ion-card>
   <ion-card class="ion-padding">
     <ion-label>
-      <h2>Datos de Pasajeros</h2>
-      <p>Seleccione la reserva a chequear o agreguela previamente en "Mis Reservas"</p>
+      <h2>{{'CI.reserva' | translate }}</h2>
+      <p>{{'CI.subtrva' | translate }}</p>
     </ion-label>
     <ion-card *ngIf="books">
       <ion-list *ngFor="let book of books">
         <ion-item>
           <ion-label>
             <h2>{{book.ota}}</h2>
-            <h3>Cod. Reserva: {{book.pnr}}</h3>
-            <p>Ingreso: {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br> Salida: {{book.co.toDate() | date:'dd/MM/yyyy'}}
+            <h3>{{'MISRESERVAS.cod' | translate }} {{book.pnr}}</h3>
+            <p>{{'MISRESERVAS.in' | translate }} {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br> {{'MISRESERVAS.out' | translate }} {{book.co.toDate() | date:'dd/MM/yyyy'}}
             </p>
           </ion-label>
           <ion-checkbox slot="end" (click)="rvaCh(book.id)"></ion-checkbox>
@@ -78,87 +78,85 @@
       </ion-list>
     </ion-card>
     <ion-card *ngIf="!books">
-      <h2>Carga tu primer reserva!</h2>
+      <h2>{{'MISRESERVAS.primerrva' | translate }}</h2>
     </ion-card>
   </ion-card>
   <ion-card>
-    <h4 class="ion-padding ion-text-center">Por favor lea y acepte nuestros Términos y Condiciones, manual de conducta y
-      DDJJ por COVID-19.</h4>
-    <ion-button (click)="term()" expand="block" class="ion-margin-horizontal">Leer</ion-button>
+    <h4 class="ion-padding ion-text-center">{{'CI.subtterm' | translate }}</h4>
+    <ion-button (click)="term()" expand="block" class="ion-margin-horizontal">{{'CI.leer' | translate }}</ion-button>
     <ion-item>
-      <p>Acepto los Términos y Condiciones, manual de conducta y DDJJ por COVID-19.</p>
+      <p>{{'CI.aceptoterm' | translate }}</p>
       <ion-checkbox slot="end" (click)="termCh(1)"></ion-checkbox>
     </ion-item>
   </ion-card>
   <ion-card class="ion-padding">
     <ion-label>
-      <h2>Datos de Tarjeta de Crédito de Garantía</h2>
-      <p>Le solicitamos los datos de su tarjeta de crédito solo a modo de Garantía. No realizaremos ninguno cargo en la
-        misma si Usted no lo requiere al momento del Check Out</p>
+      <h2>{{'CI.tc' | translate }}</h2>
+      <p>{{'CI.subttc' | translate }}</p>
 
     </ion-label>
     <ion-card *ngIf="tarjeta">
       <ion-item>
         <ion-icon name="person" color="primary" slot="start"></ion-icon>
-        <ion-label>Titular de Tarjeta</ion-label>
+        <ion-label>{{'CI.tittc' | translate }}</ion-label>
         <p> {{tarjeta.name}}</p>
       </ion-item>
       <ion-item>
         <ion-icon name="card" color="primary" slot="start"></ion-icon>
-        <ion-label>Número de Tarjeta</ion-label>
+        <ion-label>{{'CI.numtc' | translate }}</ion-label>
         <p>{{tarjeta.card}}</p>
       </ion-item>
       <ion-item>
         <ion-icon name="calendar" color="primary" slot="start"></ion-icon>
-        <ion-label>Vencimiento:</ion-label>
+        <ion-label>{{'CI.vtotc' | translate }}</ion-label>
         <p>
           {{tarjeta.mes}}/{{tarjeta.ano}}
         </p>
       </ion-item>
       <ion-item>
         <ion-icon name="key" color="primary" slot="start"></ion-icon>
-        <ion-label>Cod Seg</ion-label>
+        <ion-label>{{'CI.codtc' | translate }}</ion-label>
         <p>{{tarjeta.cod}}</p>
       </ion-item>
     </ion-card>
     <ion-card *ngIf="!tarjeta" class="ion-padding-horizontal">
-      <ion-custom-form-builder [formFields]="fields" [submitButtonText]="'Guardar Datos'"
+      <ion-custom-form-builder [formFields]="fields" [submitButtonText]="'Save'"
         (formSubmission)="submitForm($event)">
       </ion-custom-form-builder>
 
     </ion-card>
   </ion-card>
-  <ion-button expand="block" color="success" (click)="goCheckIn()">Realizar App Check In</ion-button>
+  <ion-button expand="block" color="success" (click)="goCheckIn()">{{'CI.enviar' | translate }}</ion-button>
 
 </ion-content>
 
 <ion-content *ngIf="QRCI" [fullscreen]="true" class="ion-padding">
   <qrcode [qrdata]="QRCI" [width]="256" [errorCorrectionLevel]="'M'" [cssClass]="'tester'"></qrcode>
-  <h1>Excelente! Su reserva ya se encuentra checkeada</h1>
-  <h3>Le esperamos en nuestro hotel para hacer de su estadía el mejor de los momentos.</h3>
+  <h1>{{'CI.excelente' | translate }}</h1>
+  <h3>{{'CI.loesperamos' | translate }}</h3>
   <ion-card color="warning">
-    <ion-card-title class="ion-padding">Detalles de su reserva!</ion-card-title>
+    <ion-card-title class="ion-padding">{{'CI.detalle' | translate }}</ion-card-title>
     <ion-card-content>
       <ion-item>
-        <ion-label>Rva:</ion-label>
+        <ion-label>{{'MISRESERVAS.cod' | translate }}</ion-label>
         <p>{{bookCh.pnr}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Agencia:</ion-label>
+        <ion-label>{{'CI.medio' | translate }}</ion-label>
         <p>{{bookCh.ota}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Titular:</ion-label>
+        <ion-label>{{'MISRESERVAS.tit' | translate }}</ion-label>
         <p>{{bookCh.tit}}</p>
       </ion-item>
       <ion-item>
-        <ion-label>Fechas:</ion-label>
-        <p>Ingreso: {{bookCh.ci.toDate() | date:'dd/MM/yyyy'}} <br> Salida: {{bookCh.co.toDate() | date:'dd/MM/yyyy'}}
+        <ion-label>{{'CI.fechas' | translate }}</ion-label>
+        <p>{{'MISRESERVAS.in' | translate }} {{bookCh.ci.toDate() | date:'dd/MM/yyyy'}} <br> {{'MISRESERVAS.out' | translate }} {{bookCh.co.toDate() | date:'dd/MM/yyyy'}}
         </p>
       </ion-item>
 
     </ion-card-content>
   </ion-card>
   <br>
-  <ion-button expand="block" color="danger" (click)="reCI()">Rehacer Check In</ion-button>
+  <ion-button expand="block" color="danger" (click)="reCI()">{{'CI.reci' | translate }}</ion-button>
 </ion-content>

@@ -10,19 +10,19 @@
   <ion-card class="ion-align-self-auto getstart">
     <ion-img src="../assets/img/logo.svg" class="icon ion-margin"></ion-img>
     <ion-card-content class="ion-align-self-center">
-      <span class="already">Sos nuevo?</span>
+      <span class="already">{{'HOME.nuevo' | translate }}</span>
 
-      <ion-button [routerLink]="['/registration']" expand="block" color="secondary">Registrarse</ion-button>
+      <ion-button [routerLink]="['/registration']" expand="block" color="secondary">{{'HOME.registrarse' | translate }}</ion-button>
 
-      <span class="divider line one-line">ó</span>
+      <span class="divider line one-line">{{'HOME.o' | translate }}</span>
 
-      <span class="already">Ya sos Usuario?</span>
+      <span class="already">{{'HOME.yasos' | translate }}</span>
 
-      <ion-button [routerLink]="['/login']" expand="block" color="danger">Ingresar</ion-button>
-      <ion-button (click)="onLoginFB()" expand="block" color="primary">Ingresar con <ion-icon name="logo-facebook">
+      <ion-button [routerLink]="['/login']" expand="block" color="danger">{{'HOME.ingresar' | translate }}</ion-button>
+      <ion-button (click)="onLoginFB()" expand="block" color="primary">{{'HOME.ingresarcon' | translate }} <ion-icon name="logo-facebook">
         </ion-icon>
       </ion-button>
-      <ion-button (click)="onLoginGoogle()" expand="block" color="success">Ingresar con <ion-icon name="logo-google">
+      <ion-button (click)="onLoginGoogle()" expand="block" color="success">{{'HOME.ingresarcon' | translate }}<ion-icon name="logo-google">
         </ion-icon>
       </ion-button>
 

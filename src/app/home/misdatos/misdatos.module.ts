@@ -12,6 +12,7 @@ import { AvataruserComponent } from 'src/app/components/avataruser/avataruser.co
 import { UpdateUserComponent } from 'src/app/components/update-user/update-user.component';
 import { NewAcompComponent } from 'src/app/components/new-acomp/new-acomp.component';
 import { NewAutoComponent } from 'src/app/components/new-auto/new-auto.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { NewAutoComponent } from 'src/app/components/new-auto/new-auto.component
     FormsModule,
     IonicModule,
     MisdatosPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    TranslateModule.forChild()
+
   ],
   declarations: [MisdatosPage]
 })

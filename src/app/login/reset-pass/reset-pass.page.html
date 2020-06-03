@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Olvidaste tu contraseña?</ion-title>
+    <ion-title>{{'LOGIN.olvidecontra' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,13 +13,13 @@
       <ion-img src="../assets/img/logo.jpg" class="icon ion-margin"></ion-img>
       <ion-card class="ion-align-self-auto">
         <ion-card-content class="ion-text-center">
-          <small>Escribe tu correo para enviarte las instruccionespara recuperar tu contraseña.</small>
+          <small>{{'LOGIN.escribirmail' | translate }}</small>
           <ion-item>
             <ion-label position="floating">Email</ion-label>
             <ion-input type="Email" [(ngModel)]="email"></ion-input>
           </ion-item>
           <ion-button color="primary" (click)="sendLinkReset()" expand="block">
-            Enviar Link
+            {{'LOGIN.enviarlink' | translate }}
           </ion-button>
         </ion-card-content>
       </ion-card>

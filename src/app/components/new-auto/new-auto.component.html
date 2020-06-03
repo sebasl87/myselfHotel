@@ -4,9 +4,9 @@
       <ion-label class="text-wrap">Model:</ion-label>
       <ion-input type="text" [(ngModel)]="mod"></ion-input>
 
-      <ion-label class="text-wrap">Patente:</ion-label>
+      <ion-label class="text-wrap">{{'NEWAUTO.patente' | translate }}:</ion-label>
       <ion-input type="text" [(ngModel)]="patente"></ion-input>
 
   </ion-card-content>
-  <ion-button expand="block" (click)="enviarAuto()" color="warning">Guardar Auto</ion-button>
+  <ion-button expand="block" (click)="enviarAuto()" color="warning">{{'NEWAUTO.guardar' | translate }}</ion-button>
 </ion-card>

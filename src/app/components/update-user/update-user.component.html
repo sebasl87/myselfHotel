@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar color="warning">
     <ion-title class="ion-text-center">
-      Modificar Datos
+      {{'UPDATEUSER.titulo' | translate }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,18 +11,18 @@
     <ion-card color="warning" class="ion-margin-vertical">
       <ion-card-content class="ion-margin-vertical">
         <ion-item>
-          <ion-label>Nombre: </ion-label>
+          <ion-label>{{'NEWACOMP.nombre' | translate }} </ion-label>
           <br>
           <ion-input type="text" name="name" [(ngModel)]="this.userSvc.selectedUser.name"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Documento: </ion-label>
+          <ion-label>{{'CI.dni' | translate }}: </ion-label>
           <br>
           <ion-input type="number" name="dni" [(ngModel)]="this.userSvc.selectedUser.dni"></ion-input>
           <ion-icon name="camera" color="primary" (click)="takePhoto()"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label>Telefono: </ion-label>
+          <ion-label>Tel: </ion-label>
           <br>
           <ion-input type="text" name="tel" [(ngModel)]="this.userSvc.selectedUser.tel"></ion-input>
         </ion-item>
@@ -32,24 +32,24 @@
           <ion-input type="text" name="mail" [(ngModel)]="this.userSvc.selectedUser.mail"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Nacionalidad: </ion-label>
+          <ion-label>{{'MISDATOS.nacionalidad' | translate }}: </ion-label>
           <br>
           <ion-input type="text" name="nac" [(ngModel)]="this.userSvc.selectedUser.nac"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Fecha Nac.: </ion-label>
+          <ion-label>{{'MISDATOS.fnac' | translate }}: </ion-label>
           <br>
           <ion-input type="text" name="date" [(ngModel)]="this.userSvc.selectedUser.date"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Sexo: </ion-label>
+          <ion-label>{{'MISDATOS.sexo' | translate }}: </ion-label>
           <br>
           <ion-input type="text" name="sexo" [(ngModel)]="this.userSvc.selectedUser.sexo"></ion-input>
         </ion-item>
       </ion-card-content>
     </ion-card>
 <br>
-    <ion-button color="warning" expand="block" type="ngSubmit" class="ion-margin-bottom">Guardar Cambios</ion-button>
-    <ion-button color="danger" expand="block" (click)="closeModal()">Volver sin Guardar Cambios</ion-button>
+    <ion-button color="warning" expand="block" type="ngSubmit" class="ion-margin-bottom">{{'UPDATEUSER.guardar' | translate }}</ion-button>
+    <ion-button color="danger" expand="block" (click)="closeModal()">{{'NEWRVA.volver' | translate }}</ion-button>
   </form>
 </ion-content>
