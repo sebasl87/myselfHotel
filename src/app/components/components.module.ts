@@ -14,6 +14,7 @@ import { TerminosComponent } from './terminos/terminos.component';
 import { QrComponent } from './qr/qr.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageComponent } from './language/language.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { TranslateModule } from '@ngx-translate/core';
     NewAutoComponent,
     SaveBookComponent,
     TerminosComponent,
-    QrComponent
+    QrComponent,
+    LanguageComponent
 
   ],
   exports: [
@@ -38,7 +40,8 @@ import { TranslateModule } from '@ngx-translate/core';
     NewAutoComponent,
     SaveBookComponent,
     TerminosComponent,
-    QrComponent
+    QrComponent,
+    LanguageComponent
   ],
   imports: [
     CommonModule,

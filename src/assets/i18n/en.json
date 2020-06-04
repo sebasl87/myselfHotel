@@ -83,7 +83,8 @@
         "guardar": "Save Companion"
     },
     "AVATAR":{
-        "cerrar": "Close"
+        "cerrar": "Close",
+        "idioma": "Language"
     },
     "NEWAUTO":{
         "patente": "Vehicle number",

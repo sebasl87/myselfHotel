@@ -81,7 +81,8 @@
         "guardar": "Guardar Acompañante"
     },
     "AVATAR":{
-        "cerrar": "Cerrar"
+        "cerrar": "Cerrar",
+        "idioma": "Idioma"
     },
     "NEWAUTO":{
         "patente": "Patente",

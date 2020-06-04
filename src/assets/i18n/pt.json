@@ -81,7 +81,8 @@
         "guardar": "Salvar Acompanhante"
     },
     "AVATAR":{
-        "cerrar": "Fechar"
+        "cerrar": "Fechar",
+        "idioma": "Língua"
     },
     "NEWAUTO":{
         "patente": "Patente",

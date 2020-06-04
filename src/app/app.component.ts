@@ -16,10 +16,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private langugeSvc: LanguageService
-    // translate: TranslateService
+
   ) {
-    // translate.setDefaultLang('es');
-    // translate.use('es');
     this.initializeApp();
   }
 
