@@ -38,10 +38,7 @@ export class ConsumosPage implements OnInit {
         let id = books[0].id
         this.bookSvc.getOneBook(id).subscribe((book)=>{
           this.bookCh = book;
-          console.log(this.bookCh);
-          
         })
-        console.log(id);
       }
 
       loading.dismiss();
@@ -60,4 +57,8 @@ export class ConsumosPage implements OnInit {
     
   }
 
+  // disputar(fecha, item){
+  //   ESTO PARA ABRIR EL CHAT CON LOS DATOS!
+    
+  // }
 }
