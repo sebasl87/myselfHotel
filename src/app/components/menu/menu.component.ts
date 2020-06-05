@@ -40,4 +40,11 @@ export class MenuComponent implements OnInit {
 
     })
   }
+  goMisConsumos() {
+    this.authSvc.getUserAuth().subscribe(user => {
+      this.uid = user.uid;
+      this.router.navigate(['home/consumos/', this.uid])
+
+    })
+  }
 }

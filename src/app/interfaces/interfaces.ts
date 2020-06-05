@@ -41,7 +41,8 @@ export interface UserI {
     card?: string,
     tit?: string,
     check?: boolean,
-    qr?: any
+    qr?: any,
+    consumos?: any
 
   }
   export interface TarjetaI{

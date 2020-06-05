@@ -64,9 +64,6 @@ export class UserService {
   deleteAuto(newAuto, userId: string): void {
     this.db.collection('user').doc(userId).update({ auto: newAuto });
   }
-  // getUserData() {
-  //   return this.db.collection('user').snapshotChanges();
-  // }
 
   async updatePhoto(uid) {
     console.log(uid);

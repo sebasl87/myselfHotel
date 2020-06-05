@@ -1,0 +1,31 @@
+<app-header titulo="{{'MISRESERVAS.titulo' | translate }}"></app-header>
+<ion-content *ngIf="!!books?.length == 0">
+  <h2 class="ion-padding">{{'MISRESERVAS.primerrva' | translate }}</h2>
+</ion-content>
+<ion-content *ngIf="books?.length == 1">
+  <ion-list *ngFor="let book of books">
+    <ion-item (click)="mostrarConsumos(book.id)">
+      <ion-label>
+        <h2>{{book.ota}}</h2>
+        <h3>{{'MISRESERVAS.cod' | translate }} {{book.pnr}}</h3>
+        <h4>{{'MISRESERVAS.tit' | translate }} {{book.tit}}</h4>
+        <h5>{{'MISRESERVAS.in' | translate }} {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br> {{'MISRESERVAS.out' | translate }} {{book.co.toDate() | date:'dd/MM/yyyy'}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-card *ngIf="bookCh">
+    <p> Hay Datos por mostrar</p>
+  </ion-card>
+</ion-content>
+  <ion-content *ngIf="books?.length > 1">
+  <ion-list *ngFor="let book of books">
+    <ion-item (click)="mostrarConsumos(book.id)">
+      <ion-label>
+        <h2>{{book.ota}}</h2>
+        <h3>{{'MISRESERVAS.cod' | translate }} {{book.pnr}}</h3>
+        <h4>{{'MISRESERVAS.tit' | translate }} {{book.tit}}</h4>
+        <h5>{{'MISRESERVAS.in' | translate }} {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br> {{'MISRESERVAS.out' | translate }} {{book.co.toDate() | date:'dd/MM/yyyy'}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
