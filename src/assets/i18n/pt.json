@@ -70,6 +70,13 @@
         "fechas": "Datas:",
         "reci": "Refazer Check In"
     },
+    "MISCONSUMOS":{
+        "titulo": "Meus Gastos",
+        "aunno": "Sua reserva ainda não tem gastos.",
+        "fecha": "Data",
+        "concepto": "Conceito",
+        "monto": "Valor"
+    },
     "MENU":{
         "menu": "Menú",
         "misconsumos": "Meus Gastos",

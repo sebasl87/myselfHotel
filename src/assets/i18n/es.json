@@ -70,6 +70,13 @@
         "fechas": "Fechas:",
         "reci": "Rehacer Check In"
     },
+    "MISCONSUMOS":{
+        "titulo": "Mis Consumos",
+        "aunno": "Su reserva aún no cuenta con Consumos cargados.",
+        "fecha": "Fecha",
+        "concepto": "Concepto",
+        "monto": "Monto"
+    },
     "MENU":{
         "menu": "Menú",
         "misconsumos": "Mis Consumos",

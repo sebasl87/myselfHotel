@@ -72,6 +72,13 @@
         "fechas": "Dates",
         "reci": "Check In again"
     },
+    "MISCONSUMOS":{
+        "titulo": "Expenses",
+        "aunno": "You have not charges yet.",
+        "fecha": "Date",
+        "concepto": "Concept",
+        "monto": "Charge"
+    },
     "MENU":{
         "menu": "Menú",
         "misconsumos": "My Consuptions",

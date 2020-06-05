@@ -1,6 +1,6 @@
-<app-header titulo="{{'MISRESERVAS.titulo' | translate }}"></app-header>
+<app-header titulo="{{'MISCONSUMOS.titulo' | translate }}"></app-header>
 <ion-content *ngIf="!!books?.length == 0">
-  <h2 class="ion-padding">{{'MISRESERVAS.primerrva' | translate }}</h2>
+  <h2 class="ion-padding">{{'MISCONSUMOS.aunno' | translate }}</h2>
 </ion-content>
 <ion-content *ngIf="books?.length == 1">
   <ion-list *ngFor="let book of books">
@@ -16,9 +16,9 @@
   </ion-list>
   <ion-card *ngIf="bookCh">
     <ion-row class="th">
-      <ion-col size="3">Fecha</ion-col>
-      <ion-col size="5">Descripción</ion-col>
-      <ion-col size="2">Monto</ion-col>
+      <ion-col size="3">{{'MISCONSUMOS.fecha' | translate }}</ion-col>
+      <ion-col size="5">{{'MISCONSUMOS.concepto' | translate }}</ion-col>
+      <ion-col size="2">{{'MISCONSUMOS.monto' | translate }}</ion-col>
       <!-- <ion-col size="2">Disputar</ion-col>  FUNCIONALIDAD para disputar el cargo en el Chat-->
     </ion-row>
     <ion-row *ngFor="let bc of bookCh.consumos" class="th">
@@ -44,9 +44,9 @@
   </ion-list>
   <ion-card *ngIf="bookCh">
     <ion-row class="th">
-      <ion-col size="3">Fecha</ion-col>
-      <ion-col size="5">Descripción</ion-col>
-      <ion-col size="2">Monto</ion-col>
+      <ion-col size="3">{{'MISCONSUMOS.fecha' | translate }}</ion-col>
+      <ion-col size="5">{{'MISCONSUMOS.concepto' | translate }}</ion-col>
+      <ion-col size="2">{{'MISCONSUMOS.monto' | translate }}</ion-col>
       <!-- <ion-col size="2">Disputar</ion-col> -->
     </ion-row>
     <ion-row *ngFor="let bc of bookCh.consumos" class="th">
