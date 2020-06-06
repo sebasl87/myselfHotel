@@ -76,7 +76,7 @@ export class BookService {
     });
   }
 
-  checkOutBook(rva, opPago) {
+  checkOutBook(rva, opPago:number) {
     this.db.doc<BookI>(`books/${rva}`).update({
       out: opPago
     });
@@ -112,7 +112,21 @@ export class BookService {
         });
       })
     );
+    
     return this.books;
   }
-  
+  bookOut(uid) {
+    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("out", ">", 0));
+    this.books = this.booksCollection.snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        });
+      })
+    );
+    
+    return this.books;
+  }
 }

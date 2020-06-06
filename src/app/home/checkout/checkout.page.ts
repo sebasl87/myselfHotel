@@ -83,7 +83,7 @@ export class CheckoutPage implements OnInit {
   tarjeta: any = {};
   private encryptedData: string = '';
 
-  public opPagoSel: string = null;
+  public opPagoSel: number = null;
   private rva: any;
 
 
@@ -118,7 +118,7 @@ export class CheckoutPage implements OnInit {
 
   }
   checkValue(event) {
-    this.opPagoSel = event.detail.value;
+    this.opPagoSel = Number(event.detail.value);
 
   }
 
