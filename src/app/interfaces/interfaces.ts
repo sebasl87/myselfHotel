@@ -42,7 +42,9 @@ export interface UserI {
     tit?: string,
     check?: boolean,
     qr?: any,
-    consumos?: any
+    consumos?: any,
+    cardCO?: string,
+    out?: number
 
   }
   export interface TarjetaI{

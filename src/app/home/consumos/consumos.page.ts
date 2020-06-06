@@ -50,10 +50,7 @@ export class ConsumosPage implements OnInit {
   mostrarConsumos(id){
     this.bookSvc.getOneBook(id).subscribe((book)=>{
       this.bookCh = book;
-      console.log(this.bookCh);
-      
     })
-    console.log(id);
     
   }
 

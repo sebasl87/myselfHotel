@@ -47,4 +47,11 @@ export class MenuComponent implements OnInit {
 
     })
   }
+  goCheckOut() {
+    this.authSvc.getUserAuth().subscribe(user => {
+      this.uid = user.uid;
+      this.router.navigate(['home/checkout/', this.uid])
+
+    })
+  }
 }

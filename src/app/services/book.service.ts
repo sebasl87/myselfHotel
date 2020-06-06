@@ -76,6 +76,12 @@ export class BookService {
     });
   }
 
+  checkOutBook(rva, opPago) {
+    this.db.doc<BookI>(`books/${rva}`).update({
+      out: opPago
+    });
+  }
+
   updateBook(book: BookI): void {
     let idBook = book.id;
     this.bookDoc = this.db.doc<BookI>(`books/${idBook}`);

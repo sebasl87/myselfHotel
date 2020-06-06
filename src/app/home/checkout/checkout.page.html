@@ -1,0 +1,92 @@
+<app-header titulo="{{'MISCONSUMOS.titulo' | translate }}"></app-header>
+<ion-content *ngIf="!!books?.length == 0">
+  <h2 class="ion-padding">{{'MISCONSUMOS.aunno' | translate }}</h2>
+</ion-content>
+<ion-content *ngIf="books?.length > 0" class="ion-padding">
+  <ion-text class="ion-padding">Seleccione su reserva para realizar Check Out.</ion-text>
+  <ion-list *ngFor="let book of books">
+    <ion-item (click)="mostrarConsumos(book.id)">
+      <ion-label>
+        <h2>{{book.ota}}</h2>
+        <h3>{{'MISRESERVAS.cod' | translate }} {{book.pnr}}</h3>
+        <h4>{{'MISRESERVAS.tit' | translate }} {{book.tit}}</h4>
+        <h5>{{'MISRESERVAS.in' | translate }} {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br>
+          {{'MISRESERVAS.out' | translate }} {{book.co.toDate() | date:'dd/MM/yyyy'}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-card *ngIf="bookCh.consumos">
+    <ion-row class="th total">
+      <ion-col size="3">{{'MISCONSUMOS.fecha' | translate }}</ion-col>
+      <ion-col size="5">{{'MISCONSUMOS.concepto' | translate }}</ion-col>
+      <ion-col size="2">{{'MISCONSUMOS.monto' | translate }}</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let bc of bookCh.consumos" class="th">
+      <ion-col size="3">{{bc.date}}</ion-col>
+      <ion-col size="5">{{bc.item}}</ion-col>
+      <ion-col size="2">{{bc.value}}</ion-col>
+    </ion-row>
+    <ion-row class="total">
+      <ion-col size="8">Total</ion-col>
+      <ion-col size="2">{{total}}</ion-col>
+    </ion-row>
+    <br>
+    <ion-button expand="block" color="warning" (click)="opcionesCO()">Aceptar y continuar</ion-button>
+  </ion-card>
+  <ion-card *ngIf="coOp != null" class="ion-padding">
+    <ion-card-header>
+      <ion-card-title>Opciones de pago</ion-card-title>
+      <ion-card-subtitle>Seleccione una opción y finalice su Check Out</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group (ionChange)="checkValue($event)">
+        <ion-item>
+          <p>Utilizar Tarjeta de Garantía para abonar el total.</p>
+          <ion-radio slot="end" value="1"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <p>Utilizar otra Tarjeta para abonar el total.</p>
+          <ion-radio slot="end" value="2"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <p>Abonar el total en Recepción.</p>
+          <ion-radio slot="end" value="3"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+
+      <ion-card *ngIf="tarjeta" class="ion-no-padding">
+          <ion-item>
+            <ion-icon name="person" color="primary" slot="start"></ion-icon>
+            <ion-label>{{'CI.tittc' | translate }}</ion-label>
+            <p> {{tarjeta.name}}</p>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="card" color="primary" slot="start"></ion-icon>
+            <ion-label>{{'CI.numtc' | translate }}</ion-label>
+            <p>{{tarjeta.card}}</p>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="calendar" color="primary" slot="start"></ion-icon>
+            <ion-label>{{'CI.vtotc' | translate }}</ion-label>
+            <p>
+              {{tarjeta.mes}}/{{tarjeta.ano}}
+            </p>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="key" color="primary" slot="start"></ion-icon>
+            <ion-label>{{'CI.codtc' | translate }}</ion-label>
+            <p>{{tarjeta.cod}}</p>
+          </ion-item>
+        </ion-card>
+        <ion-card *ngIf="opPagoSel == 2" class="ion-no-padding">
+          <ion-custom-form-builder *ngIf="!tarjeta" [formFields]="fields" [submitButtonText]="'Save'"
+            (formSubmission)="submitForm($event)">
+          </ion-custom-form-builder>
+        </ion-card>
+    <p>La correspondiente factura se enviará a su casilla de correo informada.</p>
+    <ion-button expand="block" color="warning" (click)="checkOut()">REALIZAR CHECK OUT</ion-button>
+  </ion-card>
+</ion-content>
