@@ -44,7 +44,8 @@ export class SaveBookComponent implements OnInit {
       ci: firebase.firestore.Timestamp.fromDate(new Date(this.book.ci)),
       co: firebase.firestore.Timestamp.fromDate(new Date(this.book.co)),
       uid: this.idUser,
-      check: false
+      check: false,
+      card: 'not'
     }
     this.bookSvc.addBook(this.book).then(()=>{
       this.modal.dismiss();

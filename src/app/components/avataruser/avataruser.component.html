@@ -3,6 +3,10 @@
     <ion-icon name="person" slot="start"></ion-icon>
     <ion-label class="text-center">{{'MISDATOS.titulo' | translate }}</ion-label>
   </ion-item>
+  <ion-item (click)="openLanguagePopover($event)">
+    <ion-icon name="flag" slot="start"></ion-icon>
+    <ion-label class="text-center">{{'AVATAR.idioma' | translate }}</ion-label>
+  </ion-item>
   <ion-item (click)="onClick(2)">
     <ion-icon name="close-circle" slot="start"></ion-icon>
     <ion-label class="text-center">{{'AVATAR.cerrar' | translate }}</ion-label>

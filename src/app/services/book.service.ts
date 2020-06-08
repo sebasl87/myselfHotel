@@ -23,7 +23,22 @@ export class BookService {
   }
 
   getAllBooks(uid) {
-    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid));
+    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("card", "==", "not"));
+    this.books = this.booksCollection.snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        });
+      })
+    );
+    return this.books;
+
+  }
+
+  getAllBooksCh(uid) {
+    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("check","==",true));
     this.books = this.booksCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
@@ -44,53 +59,52 @@ export class BookService {
         return null;
       } else {
         const data = action.payload.data() as BookI;
-        // data.uid = action.payload.id;
         return data
       }
     }));
   }
 
-  checkBook(rva){
+  checkBook(rva) {
     this.db.doc<BookI>(`books/${rva}`).update({
-      check: true
+      check: true,
+      status: 1
     });
   }
 
-  offcheckBook(rva){
+  offcheckBook(rva) {
     this.db.doc<BookI>(`books/${rva}`).update({
-      check: false
+      check: false,
+      status: 0
     });
   }
-  // saveQR(rva, qrData){
-  //   this.db.doc<BookI>(`books/${rva}`).update({
-  //     qr: qrData
-  //   });
-  // }
+
+  checkOutBook(rva, opPago:number) {
+    this.db.doc<BookI>(`books/${rva}`).update({
+      out: opPago
+    });
+  }
+
   updateBook(book: BookI): void {
     let idBook = book.id;
     this.bookDoc = this.db.doc<BookI>(`books/${idBook}`);
     this.bookDoc.update(book);
   }
 
-  addBook(book: BookI){
-    return this.bookCollection.add(book).then((data)=>{
+  addBook(book: BookI) {
+    return this.bookCollection.add(book).then((data) => {
       const id = data.id;
       this.bookCollection.doc(id).update({
         id: id
       })
-      
-    }
-
-    )
-    // .then((bookRef)=>{  bookRef.update({uid: uid})})
+    })
   }
-  
+
   deleteBook(bookId: string): void {
     this.db.collection('books').doc(bookId).delete();
   }
 
   bookChecked(uid) {
-    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("check","==",true));
+    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("check", "==", true));
     this.books = this.booksCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
@@ -100,24 +114,21 @@ export class BookService {
         });
       })
     );
+    
     return this.books;
-
-  //   return this.collectionRef.where("uid", "==", uid).where("check","==",true).get().then(function (querySnapshot) {
-  //     querySnapshot.forEach(function (doc) {
-  //         return doc
-  //     });
-  // });
-      // this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("check","==",true));
-      // this.books = this.booksCollection.snapshotChanges().pipe(
-      //   map(actions => {
-      //     return actions.map(a => {
-      //       const data = a.payload.doc.data();
-      //       const id = a.payload.doc.id;
-      //       return { id, ...data };
-      //     });
-      //   })
-      // );
-      // return this.books;
-  
+  }
+  bookOut(uid) {
+    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("out", ">", 0));
+    this.books = this.booksCollection.snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        });
+      })
+    );
+    
+    return this.books;
   }
 }

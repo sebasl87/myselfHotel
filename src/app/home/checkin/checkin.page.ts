@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoadingController, ModalController, AlertController } from '@ionic/angular';
 import { UserService } from 'src/app/services/user.service';
 import { UserI, BookI } from 'src/app/interfaces/interfaces';
@@ -38,7 +38,7 @@ export class CheckinPage implements OnInit {
   public QRCI: string = null;
 
 
-  constructor(private route: ActivatedRoute, public loadingController: LoadingController, private userSvc: UserService, private bookSvc: BookService, private modal: ModalController, private ciSvc: CiService, public alertController: AlertController) {
+  constructor(private route: ActivatedRoute, public loadingController: LoadingController, private userSvc: UserService, private bookSvc: BookService, private modal: ModalController, private ciSvc: CiService, public alertController: AlertController, private router: Router) {
     //Formulario de Tarjeta:
     this.fields = [
       {
@@ -142,50 +142,51 @@ export class CheckinPage implements OnInit {
   }
 
   async goCheckIn() {
-    if(this.Dch == null){
+    if (this.Dch == null) {
       const alert = await this.alertController.create({
         header: 'Confirmar tus Datos',
         message: 'Por favor confirma tus datos y acepta antes de continuar.',
         buttons: ['OK']
       });
-  
+
       await alert.present();
-    }else if(this.rva == null){
+    } else if (this.rva == null) {
       const alert = await this.alertController.create({
         header: 'Selecciona una Reserva',
         message: 'Por favor selecciona tu reserva antes de continuar.',
         buttons: ['OK']
       });
-  
+
       await alert.present();
-    }else if(this.Tch == null){
+    } else if (this.Tch == null) {
       const alert = await this.alertController.create({
         header: 'Acepta Términos y Condiciones',
         message: 'Por favor acepta nuestros términos y condiciones antes de continuar.',
         buttons: ['OK']
       });
-  
+
       await alert.present();
-    }else if(this.tarjeta == ""){
+    } else if (this.tarjeta == "") {
       const alert = await this.alertController.create({
         header: 'Cargar Tarjeta de Garantía',
         message: 'Por favor carga una tarjeta de garantía antes de continuar.',
         buttons: ['OK']
       });
-  
+
       await alert.present();
-    }else{
+    } else {
       this.ciSvc.sendTC(this.rva, this.encryptedData);
       this.bookSvc.checkBook(this.rva);
       this.QRCI = "La reserva esta checkeada";
-      this.bookSvc.getOneBook(this.rva).subscribe((book)=>{
+      this.bookSvc.getOneBook(this.rva).subscribe((book) => {
         this.bookCh = book;
       })
-      
+      // this.router.navigate(['/'])
+
     }
   }
 
-  reCI(){
+  reCI() {
     this.bookSvc.offcheckBook(this.rva);
     this.QRCI = null;
 

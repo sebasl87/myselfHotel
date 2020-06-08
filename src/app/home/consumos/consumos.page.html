@@ -1,0 +1,60 @@
+<app-header titulo="{{'MISCONSUMOS.titulo' | translate }}"></app-header>
+<ion-content *ngIf="!!books?.length == 0">
+  <h2 class="ion-padding">{{'MISCONSUMOS.aunno' | translate }}</h2>
+</ion-content>
+<ion-content *ngIf="books?.length == 1">
+  <ion-list *ngFor="let book of books">
+    <ion-item (click)="mostrarConsumos(book.id)">
+      <ion-label>
+        <h2>{{book.ota}}</h2>
+        <h3>{{'MISRESERVAS.cod' | translate }} {{book.pnr}}</h3>
+        <h4>{{'MISRESERVAS.tit' | translate }} {{book.tit}}</h4>
+        <h5>{{'MISRESERVAS.in' | translate }} {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br>
+          {{'MISRESERVAS.out' | translate }} {{book.co.toDate() | date:'dd/MM/yyyy'}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-card *ngIf="bookCh">
+    <ion-row class="th">
+      <ion-col size="3">{{'MISCONSUMOS.fecha' | translate }}</ion-col>
+      <ion-col size="5">{{'MISCONSUMOS.concepto' | translate }}</ion-col>
+      <ion-col size="2">{{'MISCONSUMOS.monto' | translate }}</ion-col>
+      <!-- <ion-col size="2">Disputar</ion-col>  FUNCIONALIDAD para disputar el cargo en el Chat-->
+    </ion-row>
+    <ion-row *ngFor="let bc of bookCh.consumos" class="th">
+      <ion-col size="3">{{bc.date}}</ion-col>
+      <ion-col size="5">{{bc.item}}</ion-col>
+      <ion-col size="2">{{bc.value}}</ion-col>
+      <!-- <ion-col size="2" class="ion-text-center ion-no-padding ion-no-margin" (click)="disputar(bc.date, bc.item)"><h2 class="ion-no-margin"><ion-icon name="warning" color="hotel" slot="icon-only" class="ion-no-padding ion-no-margin"></ion-icon></h2> 
+      </ion-col>-->
+    </ion-row>
+  </ion-card>
+</ion-content>
+<ion-content *ngIf="books?.length > 1">
+  <ion-list *ngFor="let book of books">
+    <ion-item (click)="mostrarConsumos(book.id)">
+      <ion-label>
+        <h2>{{book.ota}}</h2>
+        <h3>{{'MISRESERVAS.cod' | translate }} {{book.pnr}}</h3>
+        <h4>{{'MISRESERVAS.tit' | translate }} {{book.tit}}</h4>
+        <h5>{{'MISRESERVAS.in' | translate }} {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br>
+          {{'MISRESERVAS.out' | translate }} {{book.co.toDate() | date:'dd/MM/yyyy'}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-card *ngIf="bookCh">
+    <ion-row class="th">
+      <ion-col size="3">{{'MISCONSUMOS.fecha' | translate }}</ion-col>
+      <ion-col size="5">{{'MISCONSUMOS.concepto' | translate }}</ion-col>
+      <ion-col size="2">{{'MISCONSUMOS.monto' | translate }}</ion-col>
+      <!-- <ion-col size="2">Disputar</ion-col> -->
+    </ion-row>
+    <ion-row *ngFor="let bc of bookCh.consumos" class="th">
+      <ion-col size="3">{{bc.date}}</ion-col>
+      <ion-col size="5">{{bc.item}}</ion-col>
+      <ion-col size="2">{{bc.value}}</ion-col>
+      <!-- <ion-col size="2" class="ion-text-center ion-no-padding ion-no-margin" (click)="disputar(bc.date, bc.item)"><h2 class="ion-no-margin"><ion-icon name="warning" color="hotel" slot="icon-only" class="ion-no-padding ion-no-margin"></ion-icon></h2>
+      </ion-col> -->
+    </ion-row>
+  </ion-card>
+</ion-content>

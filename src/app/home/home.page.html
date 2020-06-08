@@ -1,8 +1,14 @@
 <ion-header>
-  <ion-toolbar color="warning">
+  <ion-toolbar color="hotel">
     <ion-title class="ion-text-center">
       Myself Hotel
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)= "openLanguagePopover($event)">
+        <ion-icon name="flag" slot="icon-only">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

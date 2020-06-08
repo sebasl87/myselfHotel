@@ -11,13 +11,15 @@ import { AvataruserComponent } from 'src/app/components/avataruser/avataruser.co
 import { ComponentsModule } from 'src/app/components/components.module';
 import { QrComponent } from 'src/app/components/qr/qr.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageComponent } from 'src/app/components/language/language.component';
 
 
 
 @NgModule({
   entryComponents: [
     AvataruserComponent,
-    QrComponent
+    QrComponent,
+    LanguageComponent
   ],
   imports: [
     CommonModule,

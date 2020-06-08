@@ -23,6 +23,8 @@ export class CiService {
     this.db.doc<BookI>(`books/${rva}`).update({
       card: dataCard
     });
+
+    
     // this.bookSvc.getOneBook(rva).subscribe((data)=>{
     //   console.log(data);
       
@@ -30,5 +32,10 @@ export class CiService {
     // this.db.collection('cards').add(dataCard);
     // console.log(rva, 'and', dataCard);
     
+  }
+  sendTCCO(rva, dataCard){
+    this.db.doc<BookI>(`books/${rva}`).update({
+      cardCO: dataCard
+    });
   }
 }

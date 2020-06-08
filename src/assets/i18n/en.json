@@ -1,0 +1,114 @@
+{
+    "HOME":{
+        "nuevo": "Are new?",
+        "registrarse": "Create Account",
+        "o": "or",
+        "yasos": "Already have an account?",
+        "ingresar": "Login",
+        "ingresarcon": "Login with"
+
+    },
+    "REGISTRATION":{
+        "registrarse": "Create Account",
+        "nombre": "Name",
+        "guardar":"Save"
+    },
+    "LOGIN":{
+        "olvidecontra": "Forgot Password?",
+        "escribirmail": "Enter your email address and we´ll send you instructions to reset your password.",
+        "enviarlink": "Send"
+    },
+    "INDEX":{
+        "hola": "Hello",
+        "xfafoto": "Please upload a picture of your identification card to identify yourself.",
+        "rvaappch": "APP Check in confirmed",
+        "qr": "Click to view QR code",
+        "cod": "Code:",
+        "paso0": "Steps to make your APP Check in",
+        "paso1": "1- Please fill in your details and those of your companions. Do not forget to upload the photo of your identification card to be able to advance.",
+        "paso2": "2- Upload your reservation details to check in.",
+        "paso3": "3- Confirm the 4 levels of the APP check in to get tje Access code.",
+        "paso4": "4- Present the QR in the reception, take the key and enjoy your stay!"
+    },
+    "MISDATOS":{
+        "titulo": "My details",
+        "nacionalidad": "Nationality",
+        "fnac": "Date of birth",
+        "sexo": "Gender",
+        "acomp": "Companion/s",
+        "auto": "Vehicle",
+        "misdatos": "Modify my details."
+    },
+    "MISRESERVAS":{
+        "titulo": "My Reservations",
+        "primerrva": "Upload your first reservation!",
+        "cod": "Reservations code:",
+        "tit": "Surname:",
+        "in": "Check in date:",
+        "out": "Chech out date:"
+    },
+    "CI":{
+        "datos": "Guest details",
+        "subtdatos": "Check all details or modify it in 'My details' ",
+        "dni": "Identification number",
+        "aceptodatos": "I accept and confirm that the data sent corresponds to my reservation.",
+        "reserva": "Reservation Details",
+        "subtrva": "Click the reservation that you want to chek in or upload it first in 'My reservations' ",
+        "subtterm": "Please read and accept our Terms an Conditions, safety manual and COVID-19  DDJJ",
+        "leer": "Read",
+        "aceptoterm": "I accept our Terms an Conditions, safety manual and COVID-19  DDJJ",
+
+        "tc": "Guarantee credit card details",
+        "subttc": "The credit card details are only as a guarantee. We will not make any charge in it if you do not require it at the time of Check Out. ",
+        "tittc": "Card holder´s name",
+        "numtc": "Credit card number",
+        "vtotc": "Expiry date:",
+        "codtc": "Security code",
+        "enviar": "Confirm the APP check in",
+        "excelente": "Congratulation! Your check in is confirmed!",
+        "loesperamos": "We are waiting for you to make your stay very pleasant",
+        "detalle": "Reservation details!",
+        "medio": "Company:",
+        "fechas": "Dates",
+        "reci": "Check In again"
+    },
+    "MISCONSUMOS":{
+        "titulo": "Expenses",
+        "aunno": "You have not charges yet.",
+        "fecha": "Date",
+        "concepto": "Concept",
+        "monto": "Charge"
+    },
+    "MENU":{
+        "menu": "Menú",
+        "misconsumos": "My Consuptions",
+        "info": "Useful Info",
+        "comentarios": "Comments"
+    },
+    "NEWACOMP":{
+        "nombre": "Full Name:",
+        "guardar": "Save Companion"
+    },
+    "AVATAR":{
+        "cerrar": "Close",
+        "idioma": "Language"
+    },
+    "NEWAUTO":{
+        "patente": "Vehicle number",
+        "guardar": "Save vehicle"
+    },
+    "NEWRVA":{
+        "titulo": "New reservation details",
+        "tit": "Guest details",
+        "medio": "Company:",
+        "cod":"Reservation code:",
+        "in": "Check in date:",
+        "out": "Check out date:",
+        "guardar": "Save reservation",
+        "volver": "Return without saving changes"
+    },
+    "UPDATEUSER":{
+        "titulo": "Midify details",
+        "guardar": "Save changes"
+    }
+}

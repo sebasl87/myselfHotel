@@ -20,7 +20,7 @@
     "INDEX":{
         "hola": "Hola",
         "xfafoto": "Por favor carga una foto de tu documento para identificarte.",
-        "rvaappch": "Reserva APP Checkeada",
+        "rvaappch": "APP Check In Confirmado",
         "qr": "Clickea para ver QR",
         "cod": "Código:",
         "paso0": "Simples pasos para tu App Check In",
@@ -70,6 +70,13 @@
         "fechas": "Fechas:",
         "reci": "Rehacer Check In"
     },
+    "MISCONSUMOS":{
+        "titulo": "Mis Consumos",
+        "aunno": "Su reserva aún no cuenta con Consumos cargados.",
+        "fecha": "Fecha",
+        "concepto": "Concepto",
+        "monto": "Monto"
+    },
     "MENU":{
         "menu": "Menú",
         "misconsumos": "Mis Consumos",
@@ -81,7 +88,8 @@
         "guardar": "Guardar Acompañante"
     },
     "AVATAR":{
-        "cerrar": "Cerrar"
+        "cerrar": "Cerrar",
+        "idioma": "Idioma"
     },
     "NEWAUTO":{
         "patente": "Patente",
@@ -90,7 +98,7 @@
     "NEWRVA":{
         "titulo": "Datos de nueva Reserva",
         "tit": "Titular de la Rva:",
-        "medio": "Medio/Agencia/Empresa/Online:",
+        "medio": "Compañia:",
         "cod":"Código de la Reserva:",
         "in": "Fecha de Ingreso:",
         "out": "Fecha de Salida:",
@@ -100,5 +108,17 @@
     "UPDATEUSER":{
         "titulo": "Modificar Datos",
         "guardar": "Guardar Cambios"
+    },
+    "CO":{
+        "seleccione": "Seleccione su reserva para realizar Check Out.",
+        "aceptar": "Aceptar y continuar",
+        "oppago": "Opciones de pago",
+        "opselec": "Seleccione una opción y finalice su Check Out",
+        "tcgtia": "Utilizar Tarjeta de Garantía para abonar el total.",
+        "otratc":"Utilizar otra tarjeta para abonar el total",
+        "recep": "Abonar el total en Recepción",
+        "fac": "La correspondiente factura se enviará a su casilla de correo informada.",
+        "co": "REALIZAR CHECK OUT",
+        "rvaappout": "Reserva Check out"
     }
 }

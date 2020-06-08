@@ -47,6 +47,7 @@ export class IndexPage implements OnInit {
   photo: string;
   uid: string;
   booksCH: BookI[] = null;
+  booksOUT: BookI[] = null;
   foto: string = null;
 
 
@@ -68,11 +69,10 @@ export class IndexPage implements OnInit {
         }).then((col) => {
           this.collectionRef.where("uid", "==", col).where("check", "==", true).get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
-              console.log(doc.id, ' => ', doc.data());
+              this.booksCH = doc.data();
             });
           });
-        }
-        )
+        })
 
       })
 
@@ -83,6 +83,11 @@ export class IndexPage implements OnInit {
         this.uid = user.uid;
         this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
           this.booksCH = booksch
+          if(booksch.length == 0){
+            this.bookSvc.bookOut(this.uid).subscribe(booksch => {
+              this.booksOUT = booksch
+            });
+          }
         });
         this.userSvc.getOneUser(this.uid).subscribe(user => {
           this.foto = user.fotodni;
