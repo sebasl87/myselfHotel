@@ -73,6 +73,8 @@ export class CheckoutPage implements OnInit {
   public idUser: string;
   public total: number;
   public coOp = null;
+  public noConsumos = null;
+
 
   fields: FormField[] = [];
   card: AbstractControl;
@@ -112,8 +114,15 @@ export class CheckoutPage implements OnInit {
     this.rva = id;
     this.bookSvc.getOneBook(id).subscribe((book) => {
       this.bookCh = book;
-      const valores = this.bookCh.consumos;
-      this.total = valores.reduce((sum, value) => (sum + value.value), 0).toFixed(2);
+      try {
+        const valores = this.bookCh.consumos;
+        this.total = valores.reduce((sum, value) => (sum + value.value), 0).toFixed(2);
+        
+      } catch (error) {
+        this.noConsumos= true;
+        console.log('aca da mal');
+      }
+      
     })
 
   }
@@ -143,6 +152,12 @@ export class CheckoutPage implements OnInit {
       this.bookSvc.offcheckBook(this.rva);
       this.router.navigate(['/'])
     }
+  }
+  checkOutSinConsumos(){
+    this.opPagoSel = 4;
+    this.bookSvc.checkOutBook(this.rva, this.opPagoSel);
+    this.bookSvc.offcheckBook(this.rva);
+    this.router.navigate(['/'])
   }
   // disputar(fecha, item){
   //   ESTO PARA ABRIR EL CHAT CON LOS DATOS!

@@ -41,52 +41,56 @@
     <ion-card-content>
       <ion-list>
         <ion-radio-group (ionChange)="checkValue($event)">
-        <ion-item>
-          <p>{{'CO.tcgtia' | translate }}</p>
-          <ion-radio slot="end" value=1></ion-radio>
-        </ion-item>
-        <ion-item>
-          <p>{{'CO.otratc' | translate }}</p>
-          <ion-radio slot="end" value=2></ion-radio>
-        </ion-item>
-        <ion-item>
-          <p>{{'CO.recep' | translate }}</p>
-          <ion-radio slot="end" value=3></ion-radio>
-        </ion-item>
-      </ion-radio-group>
+          <ion-item>
+            <p>{{'CO.tcgtia' | translate }}</p>
+            <ion-radio slot="end" value=1></ion-radio>
+          </ion-item>
+          <ion-item>
+            <p>{{'CO.otratc' | translate }}</p>
+            <ion-radio slot="end" value=2></ion-radio>
+          </ion-item>
+          <ion-item>
+            <p>{{'CO.recep' | translate }}</p>
+            <ion-radio slot="end" value=3></ion-radio>
+          </ion-item>
+        </ion-radio-group>
       </ion-list>
     </ion-card-content>
 
-      <ion-card *ngIf="tarjeta" class="ion-no-padding">
-          <ion-item>
-            <ion-icon name="person" color="primary" slot="start"></ion-icon>
-            <ion-label>{{'CI.tittc' | translate }}</ion-label>
-            <p> {{tarjeta.name}}</p>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="card" color="primary" slot="start"></ion-icon>
-            <ion-label>{{'CI.numtc' | translate }}</ion-label>
-            <p>{{tarjeta.card}}</p>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="calendar" color="primary" slot="start"></ion-icon>
-            <ion-label>{{'CI.vtotc' | translate }}</ion-label>
-            <p>
-              {{tarjeta.mes}}/{{tarjeta.ano}}
-            </p>
-          </ion-item>
-          <ion-item>
-            <ion-icon name="key" color="primary" slot="start"></ion-icon>
-            <ion-label>{{'CI.codtc' | translate }}</ion-label>
-            <p>{{tarjeta.cod}}</p>
-          </ion-item>
-        </ion-card>
-        <ion-card *ngIf="opPagoSel == 2" class="ion-no-padding">
-          <ion-custom-form-builder *ngIf="!tarjeta" [formFields]="fields" [submitButtonText]="'Save'"
-            (formSubmission)="submitForm($event)">
-          </ion-custom-form-builder>
-        </ion-card>
+    <ion-card *ngIf="tarjeta" class="ion-no-padding">
+      <ion-item>
+        <ion-icon name="person" color="primary" slot="start"></ion-icon>
+        <ion-label>{{'CI.tittc' | translate }}</ion-label>
+        <p> {{tarjeta.name}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="card" color="primary" slot="start"></ion-icon>
+        <ion-label>{{'CI.numtc' | translate }}</ion-label>
+        <p>{{tarjeta.card}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar" color="primary" slot="start"></ion-icon>
+        <ion-label>{{'CI.vtotc' | translate }}</ion-label>
+        <p>
+          {{tarjeta.mes}}/{{tarjeta.ano}}
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="key" color="primary" slot="start"></ion-icon>
+        <ion-label>{{'CI.codtc' | translate }}</ion-label>
+        <p>{{tarjeta.cod}}</p>
+      </ion-item>
+    </ion-card>
+    <ion-card *ngIf="opPagoSel == 2" class="ion-no-padding">
+      <ion-custom-form-builder *ngIf="!tarjeta" [formFields]="fields" [submitButtonText]="'Save'"
+        (formSubmission)="submitForm($event)">
+      </ion-custom-form-builder>
+    </ion-card>
     <p>{{'CO.fac' | translate }}</p>
     <ion-button expand="block" color="hotel" (click)="checkOut()">{{'CO.co' | translate }}</ion-button>
   </ion-card>
+  <ion-card *ngIf="noConsumos">
+    <ion-button expand="block" color="hotel" (click)="checkOutSinConsumos()">{{'CO.co' | translate }}</ion-button>
+  </ion-card>
+
 </ion-content>
