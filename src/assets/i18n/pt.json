@@ -108,5 +108,17 @@
     "UPDATEUSER":{
         "titulo": "Modificar Dados",
         "guardar": "Salvar Modificações"
+    },
+    "CO":{
+        "seleccione": "Selecione sua reserva para Check Out.",
+        "aceptar": "Aceite e continue",
+        "oppago": "Opções de pagamento",
+        "opselec": "Selecione uma opção e termine o check-out",
+        "tcgtia": "Use o Cartão de Garantia para pagar o total.",
+        "otratc":"Use outro cartão para pagar o total",
+        "recep": "Pagar o total na recepção",
+        "fac": "A fatura correspondente será enviada para o seu email informado.",
+        "co": "FAZZER CHECK OUT",
+        "rvaappout": "Reserva Check out"
     }
 }
