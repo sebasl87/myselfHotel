@@ -1,5 +1,5 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar color="warning">
+  <ion-toolbar color="hotel">
     <ion-title class="ion-text-center">
       {{'UPDATEUSER.titulo' | translate }}
     </ion-title>
@@ -8,7 +8,7 @@
 <ion-content>
   <form name="userForm" #userForm="ngForm" (ngSubmit)="guardarCambios(userForm)">
     <input type="hidden" name="uid" [(ngModel)]="this.userSvc.selectedUser.uid">
-    <ion-card color="warning" class="ion-margin-vertical">
+    <ion-card color="hotel" class="ion-margin-vertical">
       <ion-card-content class="ion-margin-vertical">
         <ion-item>
           <ion-label>{{'NEWACOMP.nombre' | translate }} </ion-label>
@@ -49,7 +49,7 @@
       </ion-card-content>
     </ion-card>
 <br>
-    <ion-button color="warning" expand="block" type="ngSubmit" class="ion-margin-bottom">{{'UPDATEUSER.guardar' | translate }}</ion-button>
+    <ion-button color="hotel" expand="block" type="ngSubmit" class="ion-margin-bottom">{{'UPDATEUSER.guardar' | translate }}</ion-button>
     <ion-button color="danger" expand="block" (click)="closeModal()">{{'NEWRVA.volver' | translate }}</ion-button>
   </form>
 </ion-content>

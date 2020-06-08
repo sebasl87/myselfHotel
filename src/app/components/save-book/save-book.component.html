@@ -1,5 +1,5 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar color="warning">
+  <ion-toolbar color="hotel">
     <ion-title class="ion-text-center">
       {{'NEWRVA.titulo' | translate }}
     </ion-title>
@@ -8,7 +8,7 @@
 <ion-content>
   <!-- <form name="bookForm" #bookForm="ngForm" (ngSubmit)="guardarCambios(bookForm)"> -->
   <input type="hidden" name="id" [(ngModel)]="book.id">
-  <ion-card color="warning" class="ion-margin-vertical">
+  <ion-card color="hotel" class="ion-margin-vertical">
     <ion-card-content class="ion-margin-vertical">
       <ion-item>
         <ion-label>{{'NEWRVA.tit' | translate }} </ion-label>
@@ -39,7 +39,7 @@
     <input type="hidden" name="uid" [(ngModel)]="idUser">
 
   </ion-card>
-  <ion-button color="warning" expand="block" class="ion-margin-bottom" (click)="guardarCambios()">{{'NEWRVA.guardar' | translate }}
+  <ion-button color="hotel" expand="block" class="ion-margin-bottom" (click)="guardarCambios()">{{'NEWRVA.guardar' | translate }}
   </ion-button>
   <ion-button color="danger" expand="block" (click)="closeModal()">{{'NEWRVA.volver' | translate }}</ion-button>
   <!-- </form> -->

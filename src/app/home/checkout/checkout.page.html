@@ -3,7 +3,7 @@
   <h2 class="ion-padding">{{'MISCONSUMOS.aunno' | translate }}</h2>
 </ion-content>
 <ion-content *ngIf="books?.length > 0" class="ion-padding">
-  <ion-text class="ion-padding">Seleccione su reserva para realizar Check Out.</ion-text>
+  <ion-text class="ion-padding">{{'CO.seleccione' | translate }}</ion-text>
   <ion-list *ngFor="let book of books">
     <ion-item (click)="mostrarConsumos(book.id)">
       <ion-label>
@@ -31,26 +31,26 @@
       <ion-col size="2">{{total}}</ion-col>
     </ion-row>
     <br>
-    <ion-button expand="block" color="warning" (click)="opcionesCO()">Aceptar y continuar</ion-button>
+    <ion-button expand="block" color="hotel" (click)="opcionesCO()">{{'CO.aceptar' | translate }}</ion-button>
   </ion-card>
   <ion-card *ngIf="coOp != null" class="ion-padding">
     <ion-card-header>
-      <ion-card-title>Opciones de pago</ion-card-title>
-      <ion-card-subtitle>Seleccione una opción y finalice su Check Out</ion-card-subtitle>
+      <ion-card-title>{{'CO.oppago' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{'CO.opselec' | translate }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <ion-list>
         <ion-radio-group (ionChange)="checkValue($event)">
         <ion-item>
-          <p>Utilizar Tarjeta de Garantía para abonar el total.</p>
+          <p>{{'CO.tcgtia' | translate }}</p>
           <ion-radio slot="end" value=1></ion-radio>
         </ion-item>
         <ion-item>
-          <p>Utilizar otra Tarjeta para abonar el total.</p>
+          <p>{{'CO.otratc' | translate }}</p>
           <ion-radio slot="end" value=2></ion-radio>
         </ion-item>
         <ion-item>
-          <p>Abonar el total en Recepción.</p>
+          <p>{{'CO.recep' | translate }}</p>
           <ion-radio slot="end" value=3></ion-radio>
         </ion-item>
       </ion-radio-group>
@@ -86,7 +86,7 @@
             (formSubmission)="submitForm($event)">
           </ion-custom-form-builder>
         </ion-card>
-    <p>La correspondiente factura se enviará a su casilla de correo informada.</p>
-    <ion-button expand="block" color="warning" (click)="checkOut()">REALIZAR CHECK OUT</ion-button>
+    <p>{{'CO.fac' | translate }}</p>
+    <ion-button expand="block" color="hotel" (click)="checkOut()">{{'CO.co' | translate }}</ion-button>
   </ion-card>
 </ion-content>

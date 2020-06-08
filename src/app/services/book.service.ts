@@ -23,7 +23,7 @@ export class BookService {
   }
 
   getAllBooks(uid) {
-    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid));
+    this.booksCollection = this.db.collection<BookI>('books', ref => ref.where("uid", "==", uid).where("card", "==", "not"));
     this.books = this.booksCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
