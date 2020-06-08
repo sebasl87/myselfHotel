@@ -45,6 +45,12 @@ export class UserService {
     }));
   }
 
+  addUser(user:UserI, uid):void{
+    this.db.collection('user').doc(`${uid}`).set(user).then(()=>{
+      this.db.collection('user').doc(`${uid}`).update({
+        uid: uid})
+    })
+  }
   updateUser(user: UserI): void {
     let uidUser = user.uid;
     this.userDoc = this.db.doc<UserI>(`user/${uidUser}`);

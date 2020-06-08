@@ -1,6 +1,54 @@
 <app-header titulo="{{'MISDATOS.titulo' | translate }}"></app-header>
 
-<ion-content>
+<ion-content *ngIf="!user">
+  <form name="userForm" #userForm="ngForm" (ngSubmit)="guardarCambios(userForm)">
+    <!-- <input type="hidden" name="uid" [(ngModel)]="this.userSvc.selectedUser.uid"> -->
+    <ion-card color="hotel" class="ion-margin-vertical">
+      <ion-card-content class="ion-margin-vertical">
+        <ion-item>
+          <ion-label>{{'NEWACOMP.nombre' | translate }} </ion-label>
+          <br>
+          <ion-input type="text" name="name" [(ngModel)]="this.name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'CI.dni' | translate }}: </ion-label>
+          <br>
+          <ion-input type="number" name="dni" [(ngModel)]="this.dni"></ion-input>
+          <ion-icon name="camera" color="primary" (click)="takePhoto()"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tel: </ion-label>
+          <br>
+          <ion-input type="text" name="tel" [(ngModel)]="this.tel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email: </ion-label>
+          <br>
+          <ion-input type="text" name="mail" [(ngModel)]="this.mail"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'MISDATOS.nacionalidad' | translate }}: </ion-label>
+          <br>
+          <ion-input type="text" name="nac" [(ngModel)]="this.nac"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'MISDATOS.fnac' | translate }}: </ion-label>
+          <br>
+          <ion-input type="text" name="date" [(ngModel)]="this.date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'MISDATOS.sexo' | translate }}: </ion-label>
+          <br>
+          <ion-input type="text" name="sexo" [(ngModel)]="this.sexo"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+<br>
+    <ion-button color="hotel" expand="block" type="ngSubmit" class="ion-margin-bottom">{{'UPDATEUSER.guardar' | translate }}</ion-button>
+  </form>
+</ion-content>
+
+<ion-content *ngIf="user">
   <ion-card  color="hotel">
     <ion-card-header>
       <ion-card-title class="ion-text-center">{{user.name}}</ion-card-title>

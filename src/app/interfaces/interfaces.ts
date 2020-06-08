@@ -45,7 +45,7 @@ export interface UserI {
     consumos?: any,
     cardCO?: string,
     out?: number,
-    status?: boolean
+    status?: number
 
   }
   export interface TarjetaI{
