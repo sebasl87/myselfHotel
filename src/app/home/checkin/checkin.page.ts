@@ -181,7 +181,7 @@ export class CheckinPage implements OnInit {
       this.bookSvc.getOneBook(this.rva).subscribe((book) => {
         this.bookCh = book;
       })
-      this.router.navigate(['/'])
+      // this.router.navigate(['/'])
 
     }
   }
