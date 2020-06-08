@@ -20,7 +20,7 @@
     "INDEX":{
         "hola": "Hola",
         "xfafoto": "Por favor carga una foto de tu documento para identificarte.",
-        "rvaappch": "Reserva APP Checkeada",
+        "rvaappch": "APP Check In Confirmado",
         "qr": "Clickea para ver QR",
         "cod": "Código:",
         "paso0": "Simples pasos para tu App Check In",
@@ -98,7 +98,7 @@
     "NEWRVA":{
         "titulo": "Datos de nueva Reserva",
         "tit": "Titular de la Rva:",
-        "medio": "Medio/Agencia/Empresa/Online:",
+        "medio": "Compañia:",
         "cod":"Código de la Reserva:",
         "in": "Fecha de Ingreso:",
         "out": "Fecha de Salida:",

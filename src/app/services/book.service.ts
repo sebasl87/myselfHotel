@@ -66,13 +66,15 @@ export class BookService {
 
   checkBook(rva) {
     this.db.doc<BookI>(`books/${rva}`).update({
-      check: true
+      check: true,
+      status: true
     });
   }
 
   offcheckBook(rva) {
     this.db.doc<BookI>(`books/${rva}`).update({
-      check: false
+      check: false,
+      status: false
     });
   }
 
