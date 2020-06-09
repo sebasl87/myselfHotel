@@ -13,6 +13,8 @@ import { UpdateUserComponent } from 'src/app/components/update-user/update-user.
 import { NewAcompComponent } from 'src/app/components/new-acomp/new-acomp.component';
 import { NewAutoComponent } from 'src/app/components/new-auto/new-auto.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ChatComponent } from 'src/app/components/chat/chat.component';
+import { LanguageComponent } from 'src/app/components/language/language.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { TranslateModule } from '@ngx-translate/core';
     AvataruserComponent,
     UpdateUserComponent,
     NewAcompComponent,
-    NewAutoComponent
+    NewAutoComponent,
+    LanguageComponent,
+    ChatComponent
   ],
   imports: [
     CommonModule,

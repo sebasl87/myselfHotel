@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Storage } from '@ionic/storage'
+import { Storage } from '@ionic/storage';
 import { BookService } from 'src/app/services/book.service';
 import { BookI } from 'src/app/interfaces/interfaces';
 import { ModalController } from '@ionic/angular';
