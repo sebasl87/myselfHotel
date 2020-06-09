@@ -83,12 +83,13 @@ export class IndexPage implements OnInit {
         this.uid = user.uid;
         this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
           this.booksCH = booksch
-          if(booksch.length == 0){
-            this.bookSvc.bookOut(this.uid).subscribe(booksch => {
-              this.booksOUT = booksch
-            });
-          }
         });
+
+        this.bookSvc.bookOut(this.uid).subscribe(booksch => {
+          this.booksOUT = booksch
+
+        });
+
         this.userSvc.getOneUser(this.uid).subscribe(user => {
           this.foto = user.fotodni;
         })
