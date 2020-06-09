@@ -110,5 +110,17 @@
     "UPDATEUSER":{
         "titulo": "Midify details",
         "guardar": "Save changes"
+    },
+    "CO":{
+        "seleccione": "Click the reservation to make the Check Out.",
+        "aceptar": " Accept and Continue ",
+        "oppago": "Payment options",
+        "opselec": "Click one option and make the Check Out",
+        "tcgtia": "Use the Guarantee Credit Card to pay the total.",
+        "otratc":" Use another Credit Card to pay the total ",
+        "recep": "Pay the total at reception",
+        "fac": "The invoice will be sent to the informed mailbox.",
+        "co": "MAKE THE CHECK OUT",
+        "rvaappout": "Check out confirmed"
     }
 }

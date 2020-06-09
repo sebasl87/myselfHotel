@@ -39,6 +39,10 @@ const routes: Routes = [
       {
         path: 'checkout/:id',
         loadChildren: () => import('./home/checkout/checkout.module').then( m => m.CheckoutPageModule)
+      },
+      {
+        path: 'info',
+        loadChildren: () => import('./home/info/info.module').then( m => m.InfoPageModule)
       }
     ]
   },
