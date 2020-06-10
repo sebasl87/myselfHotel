@@ -15,6 +15,8 @@ import { QrComponent } from './qr/qr.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageComponent } from './language/language.component';
+import { FooterComponent } from './footer/footer.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { LanguageComponent } from './language/language.component';
     SaveBookComponent,
     TerminosComponent,
     QrComponent,
-    LanguageComponent
+    LanguageComponent,
+    FooterComponent,
+    ChatComponent
 
   ],
   exports: [
@@ -41,7 +45,9 @@ import { LanguageComponent } from './language/language.component';
     SaveBookComponent,
     TerminosComponent,
     QrComponent,
-    LanguageComponent
+    LanguageComponent,
+    FooterComponent,
+    ChatComponent
   ],
   imports: [
     CommonModule,
