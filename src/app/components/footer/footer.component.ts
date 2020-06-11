@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { AuthService } from 'src/app/services/auth.service';
 import { ModalController } from '@ionic/angular';
 import { ChatComponent } from '../chat/chat.component';
-import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-footer',
@@ -10,21 +11,24 @@ import { Storage } from '@ionic/storage';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private modal : ModalController, private storage: Storage) { }
+  constructor( private storage: Storage, private authSvc: AuthService, private modal: ModalController) { }
+
   private hayUID: any;
 
   ngOnInit() {
-    this.hayUID = this.storage.get('uid');
+    this.authSvc.getUserAuth().subscribe(user => {
+      this.hayUID = user.uid;
+
+    })
 
   }
-
   openChat(){
-    console.log(this.hayUID);
-    // this.modal.create({
-    //   component: ChatComponent,
-    //   componentProps : {
-    //     // chat: chat
-    //   }
-    // }).then( (modal) => modal.present())
+    this.modal.create({
+      component: ChatComponent,
+      componentProps : {
+        user: this.hayUID
+      }
+    }).then( (modal) => modal.present())
+    
   }
 }

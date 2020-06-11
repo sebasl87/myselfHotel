@@ -48,7 +48,6 @@ import { ChatComponent } from './chat/chat.component';
     LanguageComponent,
     FooterComponent,
     ChatComponent
-
   ],
   imports: [
     CommonModule,

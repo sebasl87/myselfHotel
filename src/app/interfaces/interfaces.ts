@@ -56,3 +56,9 @@ export interface UserI {
     card?: number
 
   }
+  export interface message{
+    content: string,
+    type: string,
+    date: Date,
+    hotel: boolean
+}
