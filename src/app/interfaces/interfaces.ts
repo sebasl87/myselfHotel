@@ -28,7 +28,8 @@ export interface UserI {
     sexo?: string,
     date?: string,
     comp?: acompI,
-    auto?: autoI
+    auto?: autoI,
+    inhouse?: boolean
 
   }
   export interface BookI{

@@ -48,7 +48,9 @@ export class UserService {
   addUser(user:UserI, uid):void{
     this.db.collection('user').doc(`${uid}`).set(user).then(()=>{
       this.db.collection('user').doc(`${uid}`).update({
-        uid: uid})
+        uid: uid,
+        inhouse: true
+      })
     })
   }
   updateUser(user: UserI): void {
