@@ -14,7 +14,7 @@ import { storage } from 'firebase';
 export class UpdateUserComponent implements OnInit {
   public user: UserI = {};
 
-  constructor(private navparams: NavParams, private modal: ModalController, private userSvc: UserService, private camera: Camera, private toastCtrl: ToastController) { }
+  constructor(private navparams: NavParams, private modal: ModalController, public userSvc: UserService, private camera: Camera, private toastCtrl: ToastController) { }
 
   ngOnInit() {
     this.user = this.navparams.get('user');

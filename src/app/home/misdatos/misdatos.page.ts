@@ -47,14 +47,6 @@ export class MisdatosPage implements OnInit {
     loading.dismiss();
   }
 
-  guardarCambios(userForm: NgForm): void {
-    
-    this.userSvc.addUser(userForm.value, this.idUser);
-    userForm.resetForm();
-    this.router.navigate(['/'])
-
-  }
-
 
   onPreUpdateUser(user: UserI) {
     this.modal.create({

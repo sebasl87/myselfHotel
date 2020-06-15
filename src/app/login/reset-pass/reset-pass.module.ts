@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ResetPassPageRoutingModule } from './reset-pass-routing.module';
 
 import { ResetPassPage } from './reset-pass.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ResetPassPageRoutingModule
+    ResetPassPageRoutingModule,
+    TranslateModule.forChild()
   ],
   declarations: [ResetPassPage]
 })

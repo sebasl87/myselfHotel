@@ -1,5 +1,5 @@
 <app-header titulo="CHECK OUT"></app-header>
-<ion-content *ngIf="!!books?.length == 0">
+<ion-content *ngIf="!books">
   <h2 class="ion-padding">{{'MISCONSUMOS.aunno' | translate }}</h2>
 </ion-content>
 <ion-content *ngIf="books?.length > 0" class="ion-padding">

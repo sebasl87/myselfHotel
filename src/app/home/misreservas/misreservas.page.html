@@ -1,10 +1,10 @@
 <app-header titulo="{{'MISRESERVAS.titulo' | translate }}"></app-header>
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button color="hotel" (click)="nuevaRva(idUser)">
+  <ion-fab-button color="hotel" (click)="nuevaRva()">
     <ion-icon name="add" ></ion-icon>
   </ion-fab-button>
 </ion-fab>
-<ion-content *ngIf="!!books?.length == 0">
+<ion-content *ngIf="!books">
   <h2 class="ion-padding">{{'MISRESERVAS.primerrva' | translate }}</h2>
 </ion-content>
 <ion-content *ngIf="books">

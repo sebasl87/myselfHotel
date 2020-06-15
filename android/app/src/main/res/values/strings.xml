@@ -4,8 +4,6 @@
     <string name="title_activity_main">myselfHotel</string>
     <string name="package_name">com.hotelop.app</string>
     <string name="custom_url_scheme">com.hotelop.app</string>
-
-    <string name="fb_app_id">584951719072295</string>
-    <string name="fb_app_name">ionic.myselfHotel</string>
-
+    <string name="fb_app_id"> 584951719072295 </string>
+    <string name="fb_app_name"> ionic.myselfHotel </string>
 </resources>
