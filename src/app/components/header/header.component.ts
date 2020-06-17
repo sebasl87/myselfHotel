@@ -26,7 +26,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.authSvc.getUserAuth().subscribe(user => {
       this.name = user.displayName;
+      if(user.photoURL == null){
+        this.photo = "../assets/img/logo.svg";
+
+      }else{
       this.photo = user.photoURL;
+      }
+      console.log(this.photo);
+      
     })
   }
   toggleMenu() {
