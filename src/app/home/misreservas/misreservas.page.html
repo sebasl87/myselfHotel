@@ -4,7 +4,7 @@
     <ion-icon name="add" ></ion-icon>
   </ion-fab-button>
 </ion-fab>
-<ion-content *ngIf="!books">
+<ion-content *ngIf="books?.length == 0">
   <h2 class="ion-padding">{{'MISRESERVAS.primerrva' | translate }}</h2>
 </ion-content>
 <ion-content *ngIf="books">

@@ -29,7 +29,8 @@ export interface UserI {
     date?: string,
     comp?: acompI,
     auto?: autoI,
-    inhouse?: boolean
+    inhouse?: boolean,
+    length?: any
 
   }
   export interface BookI{
@@ -46,7 +47,8 @@ export interface UserI {
     consumos?: any,
     cardCO?: string,
     out?: number,
-    status?: number
+    status?: number,
+    length?: any
 
   }
   export interface TarjetaI{

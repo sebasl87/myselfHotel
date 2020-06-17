@@ -1,6 +1,6 @@
 <app-header titulo="{{'MISDATOS.titulo' | translate }}"></app-header>
 
-<ion-content *ngIf="!user">
+<ion-content *ngIf="user?.length == 0">
   <ion-button expand="block" color="hotel" (click)="onPreUpdateUser(usuario)">{{'MISDATOS.misdatos' | translate }}</ion-button>
  
 </ion-content>
