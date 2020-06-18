@@ -36,6 +36,9 @@ export class UserService {
     this.userDoc = this.db.doc<UserI>(`user/${idUser}`);
     return this.user = this.userDoc.snapshotChanges().pipe(map(action => {
       if (action.payload.exists === false) {
+        this.db.collection('user').doc(idUser).set({
+          uid: idUser
+        })
         return null;
       } else {
         const data = action.payload.data() as UserI;
@@ -45,8 +48,8 @@ export class UserService {
     }));
   }
 
-  addUser(user:UserI, uid):void{
-    this.db.collection('user').doc(`${uid}`).set(user).then(()=>{
+  addUser(user: UserI, uid): void {
+    this.db.collection('user').doc(`${uid}`).set(user).then(() => {
       this.db.collection('user').doc(`${uid}`).update({
         uid: uid,
         inhouse: true
@@ -91,10 +94,10 @@ export class UserService {
 
       const pictures = storage().ref(filePath);
       const task = pictures.putString(image, 'data_url');
-      pictures.getDownloadURL().then((dat)=>{
+      pictures.getDownloadURL().then((dat) => {
         const downloadURL = dat;
         this.db.collection('user').doc(uid).update({ fotodni: downloadURL });
-        
+
       }).finally();
 
     } catch (e) {

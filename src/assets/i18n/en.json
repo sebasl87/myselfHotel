@@ -37,7 +37,8 @@
         "sexo": "Gender",
         "acomp": "Companion/s",
         "auto": "Vehicle",
-        "misdatos": "Modify my details."
+        "misdatos": "Modify my details.",
+        "primerdato": "Please upload your information."
     },
     "MISRESERVAS":{
         "titulo": "My Reservations",

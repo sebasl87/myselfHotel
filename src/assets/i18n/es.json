@@ -36,7 +36,8 @@
         "sexo": "Sexo",
         "acomp": "Acompañante/s",
         "auto": "Vehículo",
-        "misdatos": "Modificar Mis Datos"
+        "misdatos": "Modificar Mis Datos",
+        "primerdato": "Por favor realiza la primer carga de tus datos."
     },
     "MISRESERVAS":{
         "titulo": "Mis Reservas",
