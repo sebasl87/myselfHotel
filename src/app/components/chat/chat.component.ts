@@ -49,6 +49,7 @@ export class ChatComponent implements OnInit {
       } else {
         this.room = room[0];
         this.chat = this.room.id;
+        
       }
     })
   }

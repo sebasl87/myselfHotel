@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
       }else{
       this.photo = user.photoURL;
       }
-      console.log(this.photo);
+
       
     })
   }

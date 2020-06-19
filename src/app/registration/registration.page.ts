@@ -20,14 +20,14 @@ export class RegistrationPage implements OnInit {
   ngOnInit() { }
 
   async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Usuario creado.',
-      subHeader: 'Ingresar ahora',
-      message: 'Por favor ingresar con sus nuevos datos.',
-      buttons: ['OK']
-    });
+    // const alert = await this.alertController.create({
+    //   header: 'Usuario creado.',
+    //   subHeader: 'Ingresar ahora',
+    //   message: 'Por favor ingresar con sus nuevos datos.',
+    //   buttons: ['OK']
+    // });
 
-    await alert.present();
+    // await alert.present();
   }
 
   saveNewUser() {

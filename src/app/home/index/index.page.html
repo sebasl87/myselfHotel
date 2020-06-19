@@ -1,6 +1,8 @@
 <app-header titulo="Myself Hotel"></app-header>
 <ion-content>
-    <h2 class="ion-padding">{{'INDEX.hola' | translate}} {{name}}!</h2>
+    <h2 class="ion-padding" *ngIf="name">{{'INDEX.hola' | translate}} {{name}}!</h2>
+    <h2 class="ion-padding" *ngIf="!name">{{'INDEX.continuemos' | translate}} </h2>
+
     <ion-item *ngIf="!foto" (click)="takePhoto()">
         <ion-text color="danger">
             <h3 class="ion-padding-start">{{'INDEX.xfafoto' | translate }}</h3>
