@@ -9,6 +9,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx'
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { Platform } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 
 @Injectable({
@@ -17,7 +18,7 @@ import { Platform } from '@ionic/angular';
 export class AuthService {
 
   public isLogged: any = false;
-  constructor(public afAuth: AngularFireAuth, private router: Router, private db: AngularFirestore, private google: GooglePlus, private fb: Facebook, public platform: Platform) {
+  constructor(public afAuth: AngularFireAuth, private router: Router, private db: AngularFirestore, private google: GooglePlus, private fb: Facebook, public platform: Platform, private storage: Storage) {
     afAuth.authState.subscribe(user => (this.isLogged = user));
   }
 
@@ -82,6 +83,7 @@ export class AuthService {
     this.afAuth.signOut().then(() => {
       this.google.disconnect();
       this.fb.logout();
+      this.storage.clear();
       this.router.navigateByUrl('/');
     })
   }

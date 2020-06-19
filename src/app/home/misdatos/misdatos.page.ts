@@ -36,7 +36,7 @@ export class MisdatosPage implements OnInit {
     const loading = await this.loadingController.create({
       message: 'Cargando Sus Datos....'
     });
-    console.log(idUser);
+
     
     await loading.present();
 

@@ -7,6 +7,7 @@ import { BookI } from 'src/app/interfaces/interfaces';
 import { ModalController } from '@ionic/angular';
 import { QrComponent } from 'src/app/components/qr/qr.component';
 import { UserService } from 'src/app/services/user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -49,53 +50,120 @@ export class IndexPage implements OnInit {
   booksCH: BookI[] = null;
   booksOUT: BookI[] = null;
   foto: string = null;
-
+  hayUID: any;
+  public idUser: string = "";
 
   collectionRef = this.db.collection<BookI[]>('books').ref;
 
-  constructor(private authSvc: AuthService, private db: AngularFirestore, private storage: Storage, private bookSvc: BookService, private modal: ModalController, private userSvc: UserService) { }
+  constructor(private authSvc: AuthService, private db: AngularFirestore, private storage: Storage, private bookSvc: BookService, private modal: ModalController, private userSvc: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const hayUID = this.storage.get('uid');
-    if (hayUID == null) {
+    if(this.route.snapshot.params['id']){
+    this.uid = this.route.snapshot.params['id'];
+    this.storage.set('uid', this.uid);
+    this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
+      this.booksCH = booksch
+    });
+
+    this.bookSvc.bookOut(this.uid).subscribe(booksch => {
+      this.booksOUT = booksch
+
+    });
+
+    this.userSvc.getOneUser(this.uid).subscribe(user => {
+      this.foto = user.fotodni;
+    })
+
+    }else{
       this.authSvc.getUserAuth().subscribe(user => {
         this.name = user.displayName;
         this.photo = user.photoURL;
         this.uid = user.uid;
-        this.storage.set('uid', this.uid);
-        this.db.collection('user').doc(this.uid).set({
-          name: this.name,
-          uid: this.uid
-        }).then((col) => {
-          this.collectionRef.where("uid", "==", col).where("check", "==", true).get().then(function (querySnapshot) {
-            querySnapshot.forEach(function (doc) {
-              this.booksCH = doc.data();
-            });
-          });
-        })
+        console.log(user.uid);
+        
+        this.storage.set('uid', user.uid);
+        
+        if(this.userSvc.getOneUser(this.uid) == null){
+            console.log("primera ve");
+            
+        }
+      //   this.db.collection('user').doc(this.uid).set({
+      //     name: this.name,
+      //     uid: this.uid,
+      //     inhouse: true
+      //   }).then((col) => {
+      //     this.collectionRef.where("uid", "==", col).where("check", "==", true).get().then(function (querySnapshot) {
+      //       querySnapshot.forEach(function (doc) {
+      //         this.booksCH = doc.data();
+      //       });
+      //     });
+      //   })
 
       })
+  }
+  // console.log(this.hayUID);
 
-    } else {
-      this.authSvc.getUserAuth().subscribe(user => {
-        this.name = user.displayName;
-        this.photo = user.photoURL;
-        this.uid = user.uid;
-        this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
-          this.booksCH = booksch
-        });
+  // this.storage.get('uid').then(val => { console.log(val); });
 
-        this.bookSvc.bookOut(this.uid).subscribe(booksch => {
-          this.booksOUT = booksch
+    // this.storage.get('uid').then(val => {
+    //   if (val == undefined) {
+    //     this.hayUID = this.idUser
+    //   } else {
+    //     this.hayUID = val
+    //   }
+    // });
 
-        });
+    // if (this.hayUID == undefined) {
+    //   this.authSvc.getUserAuth().subscribe(user => {
+    //     this.name = user.displayName;
+    //     this.photo = user.photoURL;
+    //     this.uid = user.uid;
+    //     console.log(user.uid);
+        
+    //     this.storage.set('uid', user.uid);
+    //     this.storage.get('uid').then(val => { console.log(val); });
 
-        this.userSvc.getOneUser(this.uid).subscribe(user => {
-          this.foto = user.fotodni;
-        })
+    //     this.db.collection('user').doc(this.uid).set({
+    //       name: this.name,
+    //       uid: this.uid,
+    //       inhouse: true
+    //     }).then((col) => {
+    //       this.collectionRef.where("uid", "==", col).where("check", "==", true).get().then(function (querySnapshot) {
+    //         querySnapshot.forEach(function (doc) {
+    //           this.booksCH = doc.data();
+    //         });
+    //       });
+    //     })
 
-      });
-    }
+    //   })
+
+    // } else {
+    //   this.authSvc.getUserAuth().subscribe(user => {
+    //     this.name = user.displayName;
+    //     this.photo = user.photoURL;
+    //     this.uid = user.uid;
+    //   });
+    //   console.log(this.uid);
+
+    //   this.storage.set('uid', this.uid);
+    //   this.storage.get('uid').then(val => {
+    //     console.log(val);
+
+    //     this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
+    //       this.booksCH = booksch
+    //     });
+
+    //     this.bookSvc.bookOut(this.uid).subscribe(booksch => {
+    //       this.booksOUT = booksch
+
+    //     });
+
+    //     this.userSvc.getOneUser(this.uid).subscribe(user => {
+    //       this.foto = user.fotodni;
+    //     })
+
+    //   });
+    // }
   }
   takePhoto() {
 

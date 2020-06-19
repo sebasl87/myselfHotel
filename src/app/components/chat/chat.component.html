@@ -14,7 +14,7 @@
 
 
   <div *ngIf="room">
-    <ion-card *ngFor="let mensaje of room.chat" [ngClass]="mensaje.hotel ? 'hotel':'pax'">
+    <ion-card *ngFor="let mensaje of room.room.chat" [ngClass]="mensaje.hotel ? 'hotel':'pax'">
       <ion-card-content>
         {{mensaje.content}}
       </ion-card-content>

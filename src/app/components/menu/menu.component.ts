@@ -19,6 +19,13 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
   }
+  goIndex() {
+    this.authSvc.getUserAuth().subscribe(user => {
+      this.uid = user.uid;
+      this.router.navigate(['home/index', this.uid])
+
+    })
+  }
   goMisDatos() {
     this.authSvc.getUserAuth().subscribe(user => {
       this.uid = user.uid;

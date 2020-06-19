@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule), canActivate: [AuthGuard]
       },
       {
+        path:"index/:id",
+        loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule), canActivate: [AuthGuard]
+      },
+      {
         path: 'misdatos/:id',
         loadChildren: () => import('./home/misdatos/misdatos.module').then( m => m.MisdatosPageModule)
       },
