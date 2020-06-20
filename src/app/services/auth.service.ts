@@ -67,7 +67,7 @@ export class AuthService {
         return this.afAuth.signInWithCredential(auth.GoogleAuthProvider.credential(null, user_data_google.accessToken));
       })
     } else {
-      return this.afAuth.signInWithPopup(new auth.GoogleAuthProvider);
+      return this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
     }
   }
 
