@@ -24,12 +24,12 @@ export class HomePage {
     });
     await popover.present();
   }
-  onLoginGoogle(): void {
-    this.authSvc.onLoginGoogle()
-      .then(res => {
-        this.router.navigateByUrl('home/index');
-      }).catch(err => alert(err))
-  }
+  // onLoginGoogle(): void {
+  //   this.authSvc.onLoginGoogle()
+  //     .then(res => {
+  //       this.router.navigateByUrl('home/index');
+  //     }).catch(err => alert(err))
+  // }
 
   onLoginFB() {
     this.authSvc.onLoginFB()
