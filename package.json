@@ -43,7 +43,7 @@
     "cordova-plugin-camera": "^4.1.0",
     "cordova-plugin-cocoapod-support": "^1.6.2",
     "cordova-plugin-facebook4": "^6.2.0",
-    "cordova-plugin-googleplus": "^8.4.0",
+    "cordova-plugin-googleplus": "^7.0.1",
     "cordova-res": "^0.14.1",
     "core-js": "^2.5.4",
     "crypto-js": "^4.0.0",
@@ -92,8 +92,7 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-googleplus": {
-        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.70700975268-b6bejr2iemokut30kkil8ss7eo160p4c",
-        "WEB_APPLICATION_CLIENT_ID": "70700975268-b6bejr2iemokut30kkil8ss7eo160p4c.apps.googleusercontent.com"
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.70700975268-b6bejr2iemokut30kkil8ss7eo160p4c"
       },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
@@ -111,7 +110,6 @@
     },
     "platforms": [
       "browser",
-      "ios",
       "android"
     ]
   }
