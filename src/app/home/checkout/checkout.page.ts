@@ -150,7 +150,7 @@ export class CheckoutPage implements OnInit {
     } else {
       this.bookSvc.checkOutBook(this.rva, this.opPagoSel);
       this.bookSvc.offcheckBook(this.rva);
-      this.router.navigate(['/'])
+      this.router.navigate((['home/index', this.idUser]))
     }
   }
   checkOutSinConsumos(){
