@@ -27,7 +27,8 @@ export class UpdateUserComponent implements OnInit {
     // Se guarda 1 foto por UID
   }
   guardarCambios(userForm: NgForm): void {
-
+    console.log(userForm.value);
+    
     this.userSvc.updateUser(userForm.value);
     userForm.resetForm();
     this.modal.dismiss();

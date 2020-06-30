@@ -20,20 +20,20 @@ export class RegistrationPage implements OnInit {
   ngOnInit() { }
 
   async presentAlert() {
-    // const alert = await this.alertController.create({
-    //   header: 'Usuario creado.',
-    //   subHeader: 'Ingresar ahora',
-    //   message: 'Por favor ingresar con sus nuevos datos.',
-    //   buttons: ['OK']
-    // });
+    const alert = await this.alertController.create({
+      header: 'Usuario creado.',
+      subHeader: 'Ingresar ahora',
+      message: 'Por favor ingresar con sus nuevos datos.',
+      buttons: ['OK']
+    });
 
-    // await alert.present();
+    await alert.present();
   }
 
   saveNewUser() {
     this.authSvc.onRegister(this.email, this.password, this.name).then(auth => {
       this.presentAlert();
-      this.router.navigateByUrl('home/index');
+      this.router.navigateByUrl('/');
 
     }).catch(err => console.log(err))
     //HACER LAS COMPROBACIONES DE MAIL y PASS

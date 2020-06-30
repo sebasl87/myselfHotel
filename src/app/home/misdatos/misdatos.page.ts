@@ -16,28 +16,28 @@ import { NgForm } from '@angular/forms';
 })
 export class MisdatosPage implements OnInit {
 
-  
-  
-  constructor( private userSvc: UserService, private route: ActivatedRoute, private modal: ModalController, private popoverCtrl: PopoverController, public loadingController: LoadingController,private router: Router) { }
-  
+
+
+  constructor(private userSvc: UserService, private route: ActivatedRoute, private modal: ModalController, private popoverCtrl: PopoverController, public loadingController: LoadingController, private router: Router) { }
+
   public usuario: any = [];
   public user: UserI = {};
   public idUser: string = "";
 
 
   ngOnInit() {
-    
+
     this.idUser = this.route.snapshot.params['id'];
     this.getDetails(this.idUser);
 
   }
 
-  async getDetails(idUser: string){
+  async getDetails(idUser: string) {
     const loading = await this.loadingController.create({
-      message: 'Cargando Sus Datos....'
+      message: 'Cargando Datos....'
     });
 
-    
+
     await loading.present();
 
     this.userSvc.getOneUser(idUser).subscribe(user => {

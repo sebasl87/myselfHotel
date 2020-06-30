@@ -14,15 +14,15 @@ const routes: Routes = [
     children:[
       {
       path:"",
-      loadChildren: () => import('./home/home.module').then( m => m.HomePageModule), canActivate: [NoLoginGuard]
+      loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
       },
       {
         path:"index",
-        loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule), canActivate: [AuthGuard]
+        loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule)
       },
       {
         path:"index/:id",
-        loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule), canActivate: [AuthGuard]
+        loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule)
       },
       {
         path: 'misdatos/:id',

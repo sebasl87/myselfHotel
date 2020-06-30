@@ -157,7 +157,7 @@ export class CheckoutPage implements OnInit {
     this.opPagoSel = 4;
     this.bookSvc.checkOutBook(this.rva, this.opPagoSel);
     this.bookSvc.offcheckBook(this.rva);
-    this.router.navigate(['/'])
+    this.router.navigate(['home/index', this.idUser])
   }
   // disputar(fecha, item){
   //   ESTO PARA ABRIR EL CHAT CON LOS DATOS!
