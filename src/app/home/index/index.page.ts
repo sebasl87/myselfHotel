@@ -53,123 +53,50 @@ export class IndexPage implements OnInit {
   hayUID: any;
   public idUser: string = "";
 
+  public hayUsuario: any;
+
   collectionRef = this.db.collection<BookI[]>('books').ref;
 
   constructor(private authSvc: AuthService, private db: AngularFirestore, private storage: Storage, private bookSvc: BookService, private modal: ModalController, private userSvc: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    if(this.route.snapshot.params['id']){
-    this.uid = this.route.snapshot.params['id'];
-    this.storage.set('uid', this.uid);
-    this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
-      this.booksCH = booksch
-    });
 
-    this.bookSvc.bookOut(this.uid).subscribe(booksch => {
-      this.booksOUT = booksch
+    if (this.route.snapshot.params['id']) {
 
-    });
+      this.uid = this.route.snapshot.params['id'];
+      // this.storage.set('uid', this.uid);
 
-    this.userSvc.getOneUser(this.uid).subscribe(user => {
-      this.foto = user.fotodni;
-    })
+      this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
+        this.booksCH = booksch
+      });
 
-    }else{
+      this.bookSvc.bookOut(this.uid).subscribe(booksch => {
+        this.booksOUT = booksch
+
+      });
+
+      // this.userSvc.getOneUser(this.uid).subscribe(user => {
+      //   this.foto = user.fotodni;
+      // })
+
+    } else {
+
       this.authSvc.getUserAuth().subscribe(user => {
         this.name = user.displayName;
         this.photo = user.photoURL;
         this.uid = user.uid;
-        console.log(user.uid);
-        
-        this.storage.set('uid', user.uid);
-        
-        if(this.userSvc.getOneUser(this.uid) == null){
-            console.log("primera ve");
-            
-        }
-      //   this.db.collection('user').doc(this.uid).set({
-      //     name: this.name,
-      //     uid: this.uid,
-      //     inhouse: true
-      //   }).then((col) => {
-      //     this.collectionRef.where("uid", "==", col).where("check", "==", true).get().then(function (querySnapshot) {
-      //       querySnapshot.forEach(function (doc) {
-      //         this.booksCH = doc.data();
-      //       });
-      //     });
-      //   })
 
-      })
+
+        // this.storage.set('uid', user.uid);
+
+        // if (this.userSvc.getOneUser(this.uid) == null) {
+        //   console.log("primera ve");
+        // }
+      });
+    }
   }
-  // console.log(this.hayUID);
 
-  // this.storage.get('uid').then(val => { console.log(val); });
-
-    // this.storage.get('uid').then(val => {
-    //   if (val == undefined) {
-    //     this.hayUID = this.idUser
-    //   } else {
-    //     this.hayUID = val
-    //   }
-    // });
-
-    // if (this.hayUID == undefined) {
-    //   this.authSvc.getUserAuth().subscribe(user => {
-    //     this.name = user.displayName;
-    //     this.photo = user.photoURL;
-    //     this.uid = user.uid;
-    //     console.log(user.uid);
-        
-    //     this.storage.set('uid', user.uid);
-    //     this.storage.get('uid').then(val => { console.log(val); });
-
-    //     this.db.collection('user').doc(this.uid).set({
-    //       name: this.name,
-    //       uid: this.uid,
-    //       inhouse: true
-    //     }).then((col) => {
-    //       this.collectionRef.where("uid", "==", col).where("check", "==", true).get().then(function (querySnapshot) {
-    //         querySnapshot.forEach(function (doc) {
-    //           this.booksCH = doc.data();
-    //         });
-    //       });
-    //     })
-
-    //   })
-
-    // } else {
-    //   this.authSvc.getUserAuth().subscribe(user => {
-    //     this.name = user.displayName;
-    //     this.photo = user.photoURL;
-    //     this.uid = user.uid;
-    //   });
-    //   console.log(this.uid);
-
-    //   this.storage.set('uid', this.uid);
-    //   this.storage.get('uid').then(val => {
-    //     console.log(val);
-
-    //     this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
-    //       this.booksCH = booksch
-    //     });
-
-    //     this.bookSvc.bookOut(this.uid).subscribe(booksch => {
-    //       this.booksOUT = booksch
-
-    //     });
-
-    //     this.userSvc.getOneUser(this.uid).subscribe(user => {
-    //       this.foto = user.fotodni;
-    //     })
-
-    //   });
-    // }
-  }
-  takePhoto() {
-
-    this.userSvc.updatePhoto(this.uid);
-    // Se guarda 1 foto por UID
-  }
+  
   mostrarQR(id) {
     this.modal.create({
       component: QrComponent,

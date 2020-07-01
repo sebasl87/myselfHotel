@@ -1,12 +1,6 @@
 <app-header titulo="{{'MISDATOS.titulo' | translate }}"></app-header>
 
-<ion-content *ngIf="!user.name">
-  <h2 class="ion-padding">{{'MISDATOS.primerdato' | translate }}</h2>
-  <ion-button expand="block" color="hotel" (click)="onPreUpdateUser(usuario)">{{'MISDATOS.titulo' | translate }}</ion-button>
- 
-</ion-content>
-
-<ion-content *ngIf="user.name">
+<ion-content>
   <ion-card  color="hotel">
     <ion-card-header>
       <ion-card-title class="ion-text-center">{{user.name}}</ion-card-title>

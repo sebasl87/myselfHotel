@@ -17,6 +17,10 @@ const routes: Routes = [
       loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
       },
       {
+        path: 'first',
+        loadChildren: () => import('./home/first/first.module').then( m => m.FirstPageModule)
+      },
+      {
         path:"index",
         loadChildren: () => import('./home/index/index.module').then( m => m.IndexPageModule)
       },
@@ -52,11 +56,11 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule), canActivate : [NoLoginGuard]
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'registration',
-    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule), canActivate : [NoLoginGuard]
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
   },
 ];
 

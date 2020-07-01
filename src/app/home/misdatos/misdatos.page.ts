@@ -52,7 +52,8 @@ export class MisdatosPage implements OnInit {
     this.modal.create({
       component: UpdateUserComponent,
       componentProps: {
-        user: this.user
+        user: this.user,
+        id: this.idUser
       }
     }).then((modal) => modal.present())
 

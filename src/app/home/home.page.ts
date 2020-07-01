@@ -34,7 +34,7 @@ export class HomePage {
   onLoginFB() {
     this.authSvc.onLoginFB()
       .then(res => {
-        this.router.navigateByUrl('home/index');
+        this.router.navigateByUrl('home/first');
       }).catch(err => alert(err))
   }
 

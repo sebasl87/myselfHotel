@@ -112,7 +112,8 @@
     "UPDATEUSER":{
         "titulo": "Midify details",
         "guardar": "Save changes",
-        "obligatorio": " ** All fields are required."
+        "obligatorio": " ** All fields are required.",
+        "first": "Please! Complete your information to start. You can change this information in 'My  Details'"
     },
     "CO":{
         "seleccione": "Click the reservation to make the Check Out.",

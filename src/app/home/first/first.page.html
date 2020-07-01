@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="hotel">
+    <ion-title class="ion-text-center">
+      {{'MISDATOS.titulo' | translate }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)= "openLanguagePopover($event)">
+        <ion-icon name="flag" slot="icon-only">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <form name="userForm" #userForm="ngForm" (ngSubmit)="guardarCambios(userForm)">
+    <input type="hidden" name="uid" [(ngModel)]="uid">
+    <ion-card color="hotel" class="ion-margin-vertical">
+      <h5 class="ion-padding">{{'UPDATEUSER.first' | translate }}</h5>
+      <ion-card-content class="ion-margin-vertical">
+        <ion-item>
+          <ion-label>{{'NEWACOMP.nombre' | translate }} </ion-label>
+          <br>
+          <ion-input type="text" name="name" [(ngModel)]="name" placeholder="Miguel A. Da Vinci"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'CI.dni' | translate }}: </ion-label>
+          <br>
+          <ion-input type="number" name="dni" [(ngModel)]="dni" placeholder="XX.XXX.XXX"></ion-input>
+          <ion-icon name="camera" color="primary" (click)="takePhoto()"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tel: </ion-label>
+          <br>
+          <ion-input type="text" name="tel" [(ngModel)]="tel" placeholder="+XX-XX-XXXX-XXXX"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email: </ion-label>
+          <br>
+          <ion-input type="text" name="mail" [(ngModel)]="mail" placeholder="example@example.com"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'MISDATOS.nacionalidad' | translate }}: </ion-label>
+          <br>
+          <ion-input type="text" name="nac" [(ngModel)]="nac" placeholder="Argentina"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'MISDATOS.fnac' | translate }}: </ion-label>
+          <br>
+          <ion-input type="text" name="date" [(ngModel)]="date" placeholder="dd/mm/aaaa"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'MISDATOS.sexo' | translate }}: </ion-label>
+          <br>
+          <ion-select class="custom-options" name="sexo" [(ngModel)]="sexo">
+            <ion-select-option value="Masculino">Masculino</ion-select-option>
+            <ion-select-option value="Femenino">Femenino</ion-select-option>
+            <ion-select-option value="No binario">No binario</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <br>
+    <ion-button color="hotel" expand="block" type="ngSubmit" class="ion-margin-bottom">
+      {{'UPDATEUSER.guardar' | translate }}</ion-button>
+  </form>
+  <ion-button color="danger" expand="block" (click)="salir()">{{'AVATAR.cerrar' | translate }}</ion-button>
+</ion-content>

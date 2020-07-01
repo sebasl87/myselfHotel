@@ -13,11 +13,13 @@ import { storage } from 'firebase';
 })
 export class UpdateUserComponent implements OnInit {
   public user: UserI = {};
+  public id: any;
 
   constructor(private navparams: NavParams, private modal: ModalController, public userSvc: UserService, private camera: Camera, private toastCtrl: ToastController) { }
 
   ngOnInit() {
     this.user = this.navparams.get('user');
+    
     this.userSvc.selectedUser = Object.assign({}, this.user);
 
   }
@@ -27,7 +29,6 @@ export class UpdateUserComponent implements OnInit {
     // Se guarda 1 foto por UID
   }
   guardarCambios(userForm: NgForm): void {
-    console.log(userForm.value);
     
     this.userSvc.updateUser(userForm.value);
     userForm.resetForm();

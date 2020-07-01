@@ -110,7 +110,8 @@
     "UPDATEUSER":{
         "titulo": "Modificar Datos",
         "guardar": "Guardar Cambios",
-        "obligatorio": " ** Todos los campos son obligatorios."
+        "obligatorio": " ** Todos los campos son obligatorios.",
+        "first": "Por favor, para poder comenzar complete sus datos. Luego los podra modificar desde 'Mis Datos'"
     },
     "CO":{
         "seleccione": "Seleccione su reserva para realizar Check Out.",

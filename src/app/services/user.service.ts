@@ -48,14 +48,15 @@ export class UserService {
     }));
   }
 
-  addUser(user: UserI, uid): void {
-    this.db.collection('user').doc(`${uid}`).set(user).then(() => {
-      this.db.collection('user').doc(`${uid}`).update({
-        uid: uid,
-        inhouse: true
-      })
-    })
+  // addUser(uid): void {
+  //   this.db.collection('user').doc(`${uid}`).set({uid: uid})
+    
+  // }
+  addUser(user: UserI): void {
+    let uid = user.uid;
+    this.db.collection('user').doc(`${uid}`).set(user);
   }
+
   updateUser(user: UserI): void {
     let uidUser = user.uid;
     this.userDoc = this.db.doc<UserI>(`user/${uidUser}`);

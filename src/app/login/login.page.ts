@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
   userLogin(){
     this.authSvc.onLogin(this.user)
     .then(res=>{
-      this.router.navigateByUrl('home/index');
+      this.router.navigateByUrl('home/first');
     }).catch(err => this.presentAlert())
   }
   
