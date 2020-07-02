@@ -11,7 +11,8 @@
     "REGISTRATION":{
         "registrarse": "Create Account",
         "nombre": "Name",
-        "guardar":"Save"
+        "guardar":"Save",
+        "password": "Password"
     },
     "LOGIN":{
         "olvidecontra": "Forgot Password?",
@@ -21,7 +22,7 @@
     "INDEX":{
         "hola": "Hello",
         "continuemos": "Let's go...",
-        "xfafoto": "Please upload a picture of your identification card to identify yourself.",
+        "xfafoto": "Please upload a picture of your identification card to identify yourself, in 'My Details'.",
         "rvaappch": "APP Check in confirmed",
         "qr": "Click to view QR code",
         "cod": "Code:",
@@ -113,7 +114,7 @@
         "titulo": "Midify details",
         "guardar": "Save changes",
         "obligatorio": " ** All fields are required.",
-        "first": "Please! Complete your information to start. You can change this information in 'My  Details'"
+        "first": "Please! Complete your information to start. You can change it in 'My  Details' and add companion/s and car."
     },
     "CO":{
         "seleccione": "Click the reservation to make the Check Out.",
@@ -126,5 +127,21 @@
         "fac": "The invoice will be sent to the informed mailbox.",
         "co": "MAKE THE CHECK OUT",
         "rvaappout": "Check out confirmed"
+    },
+    "ALERT":{
+        "dni": "Upload a picture of your identification card",
+        "datos": "Confirm your details",
+        "datosmsg": "Please confirm your details and accept before continue.",
+        "rva": "Choose a reservation",
+        "rvamsg": "Please select your reservation before continuing.",
+        "term": "Accept Terms and Conditions",
+        "termmsg": " Please read and accept our Terms and Conditions before continuing..",
+        "tc": "Upload a guarantee credit card",
+        "tcmsg": "Please upload a guarantee credit card before continuig.",
+        "copago": " Confirm a payment method",
+        "copagomsg": "Please confirm a payment method in order to make your check out.",
+        "user": "Account created",
+        "usersub": "Login",
+        "usermsg": "Please login with your new details."
     }
 }

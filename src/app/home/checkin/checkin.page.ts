@@ -8,6 +8,7 @@ import { TerminosComponent } from 'src/app/components/terminos/terminos.componen
 import { FormField } from 'ion-custom-form-builder';
 import { AbstractControl, Validators } from '@angular/forms';
 import { CiService } from 'src/app/services/ci.service';
+import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -38,7 +39,7 @@ export class CheckinPage implements OnInit {
   public QRCI: string = null;
 
 
-  constructor(private route: ActivatedRoute, public loadingController: LoadingController, private userSvc: UserService, private bookSvc: BookService, private modal: ModalController, private ciSvc: CiService, public alertController: AlertController, private router: Router) {
+  constructor(private route: ActivatedRoute, public loadingController: LoadingController, private userSvc: UserService, private bookSvc: BookService, private modal: ModalController, private ciSvc: CiService, public alertController: AlertController, private router: Router, private translateSvc: TranslateService) {
     //Formulario de Tarjeta:
     this.fields = [
       {
@@ -142,34 +143,42 @@ export class CheckinPage implements OnInit {
   }
 
   async goCheckIn() {
-    if (this.Dch == null) {
+    if (this.user.fotodni == null) {
       const alert = await this.alertController.create({
-        header: 'Confirmar tus Datos',
-        message: 'Por favor confirma tus datos y acepta antes de continuar.',
+        header: this.translateSvc.instant('ALERT.dni'),
+        message: this.translateSvc.instant('INDEX.xfafoto'),
+        buttons: ['OK']
+      });
+      await alert.present();
+
+    } else if (this.Dch == null) {
+      const alert = await this.alertController.create({
+        header: this.translateSvc.instant('ALERT.datos'),
+        message: this.translateSvc.instant('ALERT.datosmsg'),
         buttons: ['OK']
       });
 
       await alert.present();
     } else if (this.rva == null) {
       const alert = await this.alertController.create({
-        header: 'Selecciona una Reserva',
-        message: 'Por favor selecciona tu reserva antes de continuar.',
+        header: this.translateSvc.instant('ALERT.rva'),
+        message: this.translateSvc.instant('ALERT.rvamsg'),
         buttons: ['OK']
       });
 
       await alert.present();
     } else if (this.Tch == null) {
       const alert = await this.alertController.create({
-        header: 'Acepta Términos y Condiciones',
-        message: 'Por favor acepta nuestros términos y condiciones antes de continuar.',
+        header: this.translateSvc.instant('ALERT.term'),
+        message: this.translateSvc.instant('ALERT.termmsg'),
         buttons: ['OK']
       });
 
       await alert.present();
     } else if (this.tarjeta == "") {
       const alert = await this.alertController.create({
-        header: 'Cargar Tarjeta de Garantía',
-        message: 'Por favor carga una tarjeta de garantía antes de continuar.',
+        header: this.translateSvc.instant('ALERT.tc'),
+        message: this.translateSvc.instant('ALERT.tcmsg'),
         buttons: ['OK']
       });
 

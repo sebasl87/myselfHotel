@@ -10,7 +10,8 @@
     "REGISTRATION":{
         "registrarse": "Registro",
         "nombre": "Nome",
-        "guardar":"Salve"
+        "guardar":"Salve",
+        "password": "Senha"
     },
     "LOGIN":{
         "olvidecontra": "Lembrar senha",
@@ -20,7 +21,7 @@
     "INDEX":{
         "hola": "Olá",
         "continuemos": "Continuar...",
-        "xfafoto": "Faça o upload de uma foto do seu documento para se identificar.",
+        "xfafoto": "Faça o upload de uma foto do seu documento para se identificar em 'Meus Dados'.",
         "rvaappch": "App Check In confirmado",
         "qr": "Clique para ter QR",
         "cod": "Código:",
@@ -111,7 +112,7 @@
         "titulo": "Modificar Dados",
         "guardar": "Salvar Modificações",
         "obligatorio": " ** Todos os campos são obrigatórios.",
-        "first": "Por favor, para poder começar a completar seus dados. Você pode modificá-los em 'Meus dados'"
+        "first": "Por favor, para poder começar a completar seus dados. Você pode modificá-los em 'Meus dados' e agregar acompanhante/s e carro."
     },
     "CO":{
         "seleccione": "Selecione sua reserva para Check Out.",
@@ -124,5 +125,21 @@
         "fac": "A fatura correspondente será enviada para o seu email informado.",
         "co": "FAZZER CHECK OUT",
         "rvaappout": "Reserva Check out"
+    },
+    "ALERT":{
+        "dni": "Carregar Foto do seu Documento",
+        "datos": "Confirme seus Dados",
+        "datosmsg": "Por favor confirme seus dados e aceite antes de continuar.",
+        "rva": "Seleciona uma reserva",
+        "rvamsg": "Por favor seleciona sua reserva antes de continuar.",
+        "term": "Aceita Termos y Condições",
+        "termmsg": "Por favor aceita nossos termos y condições antes de continuar.",
+        "tc": "Carregar cartão de garantia",
+        "tcmsg": "Por favor carregar um cartão de garantia antes de continuar.",
+        "copago": "Confirme un forma de Pagamento",
+        "copagomsg": "Selecione um método de pagamento para poder fazer check-out.",
+        "user": "Usuário criado",
+        "usersub": "Entre Agora",
+        "usermsg": "Por favor, insira suas novas informações."
     }
 }

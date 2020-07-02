@@ -6,6 +6,7 @@ import { BookI } from 'src/app/interfaces/interfaces';
 import { FormField } from 'ion-custom-form-builder';
 import { AbstractControl, Validators } from '@angular/forms';
 import { CiService } from 'src/app/services/ci.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-checkout',
@@ -14,7 +15,7 @@ import { CiService } from 'src/app/services/ci.service';
 })
 export class CheckoutPage implements OnInit {
 
-  constructor(private route: ActivatedRoute, public loadingController: LoadingController, private bookSvc: BookService, private ciSvc: CiService, public alertController: AlertController, private router: Router) {
+  constructor(private route: ActivatedRoute, public loadingController: LoadingController, private bookSvc: BookService, private ciSvc: CiService, public alertController: AlertController, private router: Router, private translateSvc: TranslateService) {
     this.fields = [
       {
         type: 'number',
@@ -142,8 +143,8 @@ export class CheckoutPage implements OnInit {
   async checkOut() {
     if (this.opPagoSel == null) {
       const alert = await this.alertController.create({
-        header: 'Confirme una forma de Pago',
-        message: 'Por favor seleccione una forma de Pago para poder realizar su Check Out.',
+        header: this.translateSvc.instant('ALERT.copago'),
+        message: this.translateSvc.instant('ALERT.copagomsg'),
         buttons: ['OK']
       });
       await alert.present();

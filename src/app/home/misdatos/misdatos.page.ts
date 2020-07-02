@@ -78,6 +78,7 @@ export class MisdatosPage implements OnInit {
     )
     this.userSvc.deleteAcomp(newAcomp, this.user.uid);
   }
+  
   async newAuto(evento) {
     const popover = await this.popoverCtrl.create({
       component: NewAutoComponent,
@@ -89,6 +90,7 @@ export class MisdatosPage implements OnInit {
     });
     await popover.present();
   }
+  
   eliminarAuto(patente) {
     const userAuto: any = this.user.auto;
     const newAuto = userAuto.filter(

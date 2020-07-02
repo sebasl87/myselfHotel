@@ -42,6 +42,13 @@ export class FirstPage implements OnInit {
       }
     })
   }
+
+  takePhoto() {
+
+    this.userSvc.updatePhoto(this.uid);
+    // Se guarda 1 foto por UID
+  }
+  
   guardarCambios(userForm: NgForm): void {
     
     this.userSvc.addUser(userForm.value);

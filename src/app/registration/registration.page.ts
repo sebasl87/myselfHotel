@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from '../shared/user.class';
 import { auth } from 'firebase';
 import { AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-registration',
@@ -15,15 +16,15 @@ export class RegistrationPage implements OnInit {
   public name: string;
   public password: string;
 
-  constructor(private authSvc: AuthService, private router: Router, public alertController: AlertController) { }
+  constructor(private authSvc: AuthService, private router: Router, public alertController: AlertController, private translateSvc: TranslateService) { }
 
   ngOnInit() { }
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: 'Usuario creado.',
-      subHeader: 'Ingresar ahora',
-      message: 'Por favor ingresar con sus nuevos datos.',
+      header: this.translateSvc.instant('ALERT.user'),
+      subHeader: this.translateSvc.instant('ALERT.usersub'),
+      message: this.translateSvc.instant('ALERT.usermsg'),
       buttons: ['OK']
     });
 

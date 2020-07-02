@@ -10,7 +10,8 @@
     "REGISTRATION":{
         "registrarse": "Registrarse",
         "nombre": "Nombre",
-        "guardar":"Guardar"
+        "guardar": "Guardar",
+        "password": "Contraseña"
     },
     "LOGIN":{
         "olvidecontra": "Olvidé mi Contraseña",
@@ -20,7 +21,7 @@
     "INDEX":{
         "hola": "Hola",
         "continuemos": "Continuemos...",
-        "xfafoto": "Por favor carga una foto de tu documento para identificarte.",
+        "xfafoto": "Por favor carga una foto de tu documento para identificarte, desde 'Mis Datos'.",
         "rvaappch": "APP Check In Confirmado",
         "qr": "Clickea para ver QR",
         "cod": "Código:",
@@ -111,7 +112,7 @@
         "titulo": "Modificar Datos",
         "guardar": "Guardar Cambios",
         "obligatorio": " ** Todos los campos son obligatorios.",
-        "first": "Por favor, para poder comenzar complete sus datos. Luego los podra modificar desde 'Mis Datos'"
+        "first": "Por favor, para poder comenzar complete sus datos. Luego los podra modificar desde 'Mis Datos' y agregar acompañantes y vehículo."
     },
     "CO":{
         "seleccione": "Seleccione su reserva para realizar Check Out.",
@@ -124,5 +125,21 @@
         "fac": "La correspondiente factura se enviará a su casilla de correo informada.",
         "co": "REALIZAR CHECK OUT",
         "rvaappout": "Reserva Check out"
+    },
+    "ALERT":{
+        "dni": "Cargar Foto de Documento",
+        "datos": "Confirmar tus Datos",
+        "datosmsg": "Por favor confirma tus datos y acepta antes de continuar.",
+        "rva": "Selecciona una reserva",
+        "rvamsg": "Por favor selecciona tu reserva antes de continuar.",
+        "term": "Acepta Términos y Condiciones",
+        "termmsg": "Por favor acepta nuestros términos y condiciones antes de continuar.",
+        "tc": "Cargar Tarjeta de Garantía",
+        "tcmsg": "Por favor carga una tarjeta de garantía antes de continuar.",
+        "copago": "Confirme una forma de Pago",
+        "copagomsg": "Por favor seleccione una forma de Pago para poder realizar su Check Out.",
+        "user": "Usuario Creado",
+        "usersub": "Ingresar Ahora",
+        "usermsg": "Por favor ingresar con sus nuevos datos."
     }
 }
