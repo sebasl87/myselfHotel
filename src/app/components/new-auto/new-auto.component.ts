@@ -29,7 +29,9 @@ export class NewAutoComponent implements OnInit {
        
     }
     this.userSvc.sendAuto( auto, this.user.uid);
-    this.popover.dismiss();
+    this.mod="";
+    this.patente=""
+    // this.popover.dismiss();
     
   }
 }

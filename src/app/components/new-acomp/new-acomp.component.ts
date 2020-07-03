@@ -33,7 +33,11 @@ export class NewAcompComponent implements OnInit {
        
     }
     this.userSvc.sendAcomp( acomp, this.user.uid);
-    this.popover.dismiss();
+    this.name = "";
+    this.dni = null;
+    this.date = "";
+
+    // this.popover.dismiss();
     
   }
 }

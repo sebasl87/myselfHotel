@@ -15,17 +15,15 @@ export class FooterComponent implements OnInit {
   constructor(private storage: Storage, private authSvc: AuthService, private modal: ModalController, private userSvc: UserService) { }
 
   private hayUID: any;
-  private name: any;
-  private id: any;
 
 
   ngOnInit() {
-    this.storage.get('uid').then(val=>{
-      this.hayUID = val
-      
-    });
+    this.authSvc.getUserAuth().subscribe(user => {
+      this.hayUID = user.uid
+    })
 
   }
+
   openChat() {
     this.modal.create({
       component: ChatComponent,
