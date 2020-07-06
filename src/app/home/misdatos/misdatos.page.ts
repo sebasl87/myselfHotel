@@ -63,7 +63,6 @@ export class MisdatosPage implements OnInit {
     const popover = await this.popoverCtrl.create({
       component: NewAcompComponent,
       event: evento,
-      mode: 'ios',
       componentProps: {
         user: this.user
       }
@@ -83,7 +82,6 @@ export class MisdatosPage implements OnInit {
     const popover = await this.popoverCtrl.create({
       component: NewAutoComponent,
       event: evento,
-      mode: 'ios',
       componentProps: {
         user: this.user
       }
