@@ -35,7 +35,8 @@ export class ChatComponent implements OnInit {
       content: "Muchas gracias por elegirnos!!",
       type: 'text',
       date: new Date(),
-      hotel: true
+      hotel: true,
+      listen: true
     }
     this.chatSvc.getChatRoom(this.user).subscribe(room => {
       
@@ -64,7 +65,8 @@ export class ChatComponent implements OnInit {
       content: this.msg,
       type: 'text',
       date: new Date(),
-      hotel: false
+      hotel: false,
+      listen: false
     }
 
     this.chatSvc.sendMsgToFirebase(mensaje, this.chat);

@@ -63,5 +63,7 @@ export interface UserI {
     content: string,
     type: string,
     date: Date,
-    hotel: boolean
+    hotel: boolean,
+    listen: boolean
+
 }
