@@ -40,7 +40,7 @@ export class IndexPage implements OnInit {
     initialSlide: 0,
     slidesPerView: 1,
     autoplay: true,
-    speed: 400,
+    speed: 800,
     zoom: true,
     setWrapperSize: true
   };

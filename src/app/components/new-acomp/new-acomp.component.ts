@@ -37,7 +37,7 @@ export class NewAcompComponent implements OnInit {
     this.dni = null;
     this.date = "";
 
-    // this.popover.dismiss();
+    this.popover.dismiss();
     
   }
 }

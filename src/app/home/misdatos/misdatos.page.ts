@@ -67,7 +67,7 @@ export class MisdatosPage implements OnInit {
         user: this.user
       }
     });
-    await popover.present();
+    return await popover.present();
   }
 
   eliminarAcomp(dni) {
@@ -86,7 +86,7 @@ export class MisdatosPage implements OnInit {
         user: this.user
       }
     });
-    await popover.present();
+    return await popover.present();
   }
   
   eliminarAuto(patente) {
