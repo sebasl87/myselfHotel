@@ -55,6 +55,10 @@ export class UserService {
   addUser(user: UserI): void {
     let uid = user.uid;
     this.db.collection('user').doc(`${uid}`).set(user);
+    this.db.collection('user').doc(`${uid}`).update({
+      delete: false
+    });
+
   }
 
   updateUser(user: UserI): void {

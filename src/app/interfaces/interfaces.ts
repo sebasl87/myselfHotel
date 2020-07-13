@@ -30,7 +30,9 @@ export interface UserI {
     comp?: acompI,
     auto?: autoI,
     inhouse?: boolean,
-    length?: any
+    length?: any,
+    deletedAt?: Date,
+    delete?: boolean
 
   }
   export interface BookI{
