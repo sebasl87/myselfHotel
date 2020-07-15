@@ -71,7 +71,9 @@
         "detalle": "Detalles de su reserva!",
         "medio": "Medio:",
         "fechas": "Fechas:",
-        "reci": "Rehacer Check In"
+        "reci": "Rehacer Check In",
+        "terminos": "Términos y Condiciones",
+        "contenido": "Me comprometo a dejar la habitación el día de salida mencionado en este documento antes de las 10 AM. En el caso de no desocuparla voluntariamente el Hotel tiene derecho a retirar el equipaje y las pertenencias encontradas en la misma y guardarlo a mi nombre. El Hotel no se hace responsable por hurto, desaparición o daño de objetos de valor, joyas y/o dinero dejados en la habitación. <br> Para su comodidad la misma cuenta con una caja de seguridad. La aceptación de estos términos y condiciones se considera válida para el cupón de tarjeta de crédito, si este fuera generado por el hotel, en caso de no cancelar la totalidad de los gastos generados durante mi estadía. <br>Acepto que, de acuerdo con las políticas del hotel y la ordenanza municipal n° 354/2005, está terminantemente prohibido fumar en todas las instalaciones del hotel, tanto en áreas públicas como en la habitación.<br>Confirmo haber leído y aceptar el cumplimiento de las normas exigidas por Altos Ushuaia tomando como referencia los protocolos Covid-19  informados por las autoridades tanto del gobierno nacional como provincial para alojamientos turísticos. Y estar notificado de que ante el incumplimiento de las mismas, el hotel se reservará el derecho de admisión y permanencia.<br> Los datos consignados en el presente documento tienen carácter de declaración jurada."
     },
     "MISCONSUMOS":{
         "titulo": "Mis Consumos",

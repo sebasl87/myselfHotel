@@ -5,43 +5,8 @@
   </ion-fab>
 <ion-content class="ion-padding">
     <ion-infinite-scroll>
-        <h1>Términos y condiciones</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita recusandae aliquam libero consequuntur
-            quasi. Deserunt esse consequatur velit impedit nihil cupiditate blanditiis quo recusandae, cum dicta totam
-            optio cumque iure omnis reprehenderit! Mollitia, quia quae. Non repudiandae, ducimus cupiditate laudantium
-            asperiores esse voluptates adipisci ullam iste autem blanditiis illo quia minus iusto quis expedita fugit
-            explicabo nobis eum animi? Iste doloremque ea inventore esse a, natus sit. Doloribus, earum! Rem iste
-            voluptatum dolores fugit corporis sint, quae quo. Dolorem culpa sint possimus harum id voluptatum
-            dignissimos? Quae harum a sint adipisci doloribus repellendus? Fuga adipisci iusto eaque beatae! Nam quis
-            perferendis similique expedita, ad aperiam sequi hic necessitatibus provident sapiente magnam ab non est
-            ipsam cumque dolorum nesciunt facilis! Adipisci eum numquam asperiores cupiditate totam aspernatur
-            consequatur quia excepturi. Atque, ipsa? Blanditiis porro quos rerum veniam. Recusandae perspiciatis
-            repellat in alias eius beatae necessitatibus, tempore sunt voluptatum accusantium quia, qui molestias,
-            maiores neque vitae ratione a molestiae non? Sit aut illo exercitationem eum laudantium, necessitatibus
-            nihil neque, dolore corrupti, cupiditate sunt laborum repellat nam libero? Dolorem veritatis dolorum quis
-            impedit animi maiores ratione ullam officiis voluptatibus mollitia! Id, in! Quaerat, reprehenderit labore.
-            Odio porro debitis laborum cumque natus voluptatem quibusdam officiis maxime itaque, recusandae ut illo
-            corporis et ipsa sint, autem accusantium dolores excepturi. Cum ex adipisci, reprehenderit dolor totam
-            exercitationem! Ut, voluptate. Reprehenderit magni, doloremque dolorum porro veniam dolores vero accusantium
-            recusandae temporibus non pariatur, doloribus illum, sapiente eos blanditiis vel eius. Deleniti eveniet
-            ducimus reprehenderit totam sunt dolores, temporibus fuga officia neque a, maiores, dolore ullam quis unde
-            voluptate cumque exercitationem saepe eum quisquam commodi quae accusamus magni earum? Explicabo porro ut
-            veniam fuga voluptate provident, placeat, quisquam laudantium culpa tenetur suscipit. Voluptas deserunt
-            quaerat eaque, ab quia quasi consequuntur natus doloremque quae necessitatibus similique quibusdam repellat
-            totam veritatis rem impedit hic blanditiis dignissimos optio magni excepturi vero. Suscipit doloremque quam
-            ab itaque! Esse totam consectetur nobis assumenda illo odit aperiam, eius id deleniti harum, ipsum
-            aspernatur! Soluta explicabo labore tempora blanditiis, molestias eaque iure? Sapiente saepe non quod vitae
-            unde enim, doloremque quasi quia vel! Alias corrupti enim ex earum debitis, blanditiis excepturi eligendi
-            soluta velit reprehenderit vero dolores, similique et. Assumenda at voluptatibus, quod ratione quam ipsa.
-            Est exercitationem, enim commodi facere repudiandae a eius natus error veritatis dolores numquam deleniti.
-            Mollitia qui ab consequatur, ea aspernatur minima, aut exercitationem cum delectus quod molestiae officia
-            rem explicabo quam repellat distinctio quibusdam enim illo? Doloremque dicta tempora debitis laborum iste
-            nam at, voluptatem assumenda in vel quas nulla quod dolorum qui ipsa aperiam sed quo voluptatum est. Ut
-            animi unde iusto asperiores. Qui quae debitis modi ad doloribus soluta, ea laborum. Quis ipsam tempore
-            temporibus harum. Ratione similique laborum molestiae ipsam ipsum dolor asperiores odio quis dignissimos
-            eligendi temporibus iste alias ex animi natus quam provident adipisci veritatis doloremque, eos nemo? Iure
-            quaerat, beatae ipsum laboriosam explicabo sapiente ullam deleniti deserunt ipsa dolorem praesentium
-            dignissimos tenetur veniam magnam. Corrupti culpa voluptas optio dolor ullam quam? Sed, nesciunt.</p>
-        <ion-button slot="end" (click)="closeModal()">Cerrar Ventana</ion-button>
+        <h1>{{'CI.terminos' | translate }}</h1>
+        <ion-text [innerHTML]="'CI.contenido' | translate" class="mb-2"></ion-text>
+        <ion-button slot="end" (click)="closeModal()" expand="block">Close</ion-button>
     </ion-infinite-scroll>
 </ion-content>
