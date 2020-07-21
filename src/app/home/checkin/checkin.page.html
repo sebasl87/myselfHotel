@@ -12,7 +12,8 @@
       </ion-item>
       <ion-item>
         <ion-label>{{'CI.dni' | translate }}</ion-label>
-        <p> {{user.dni}} </p><ion-icon *ngIf="user.fotodni" name="checkmark-circle" color="success"></ion-icon> <ion-icon *ngIf="!user.fotodni" name="close-circle" color="danger"></ion-icon>
+        <p> {{user.dni}} </p><ion-icon *ngIf="user.fotodni" name="checkmark-circle" color="success"></ion-icon>
+        <ion-button *ngIf="!user.fotodni" expand="block" color="danger" (click)="takePhoto()">{{'CI.foto' | translate }}</ion-button>
       </ion-item>
       <ion-item>
         <ion-label>Tel</ion-label>

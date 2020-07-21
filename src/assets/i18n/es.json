@@ -73,7 +73,8 @@
         "fechas": "Fechas:",
         "reci": "Rehacer Check In",
         "terminos": "Términos y Condiciones",
-        "contenido": "Me comprometo a dejar la habitación el día de salida mencionado en este documento antes de las 10 AM. En el caso de no desocuparla voluntariamente el Hotel tiene derecho a retirar el equipaje y las pertenencias encontradas en la misma y guardarlo a mi nombre. El Hotel no se hace responsable por hurto, desaparición o daño de objetos de valor, joyas y/o dinero dejados en la habitación. <br> Para su comodidad la misma cuenta con una caja de seguridad. La aceptación de estos términos y condiciones se considera válida para el cupón de tarjeta de crédito, si este fuera generado por el hotel, en caso de no cancelar la totalidad de los gastos generados durante mi estadía. <br>Acepto que, de acuerdo con las políticas del hotel y la ordenanza municipal n° 354/2005, está terminantemente prohibido fumar en todas las instalaciones del hotel, tanto en áreas públicas como en la habitación.<br>Confirmo haber leído y aceptar el cumplimiento de las normas exigidas por Altos Ushuaia tomando como referencia los protocolos Covid-19  informados por las autoridades tanto del gobierno nacional como provincial para alojamientos turísticos. Y estar notificado de que ante el incumplimiento de las mismas, el hotel se reservará el derecho de admisión y permanencia.<br> Los datos consignados en el presente documento tienen carácter de declaración jurada."
+        "contenido": "Me comprometo a dejar la habitación el día de salida mencionado en este documento antes de las 10 AM. En el caso de no desocuparla voluntariamente el Hotel tiene derecho a retirar el equipaje y las pertenencias encontradas en la misma y guardarlo a mi nombre. El Hotel no se hace responsable por hurto, desaparición o daño de objetos de valor, joyas y/o dinero dejados en la habitación. <br> Para su comodidad la misma cuenta con una caja de seguridad. La aceptación de estos términos y condiciones se considera válida para el cupón de tarjeta de crédito, si este fuera generado por el hotel, en caso de no cancelar la totalidad de los gastos generados durante mi estadía. <br>Acepto que, de acuerdo con las políticas del hotel y la ordenanza municipal n° 354/2005, está terminantemente prohibido fumar en todas las instalaciones del hotel, tanto en áreas públicas como en la habitación.<br>Confirmo haber leído y aceptar el cumplimiento de las normas exigidas por Altos Ushuaia tomando como referencia los protocolos Covid-19  informados por las autoridades tanto del gobierno nacional como provincial para alojamientos turísticos. Y estar notificado de que ante el incumplimiento de las mismas, el hotel se reservará el derecho de admisión y permanencia.<br> Los datos consignados en el presente documento tienen carácter de declaración jurada.",
+        "foto": "Subir foto de Documento"
     },
     "MISCONSUMOS":{
         "titulo": "Mis Consumos",
@@ -143,5 +144,27 @@
         "user": "Usuario Creado",
         "usersub": "Ingresar Ahora",
         "usermsg": "Por favor ingresar con sus nuevos datos."
+    },
+    "INFO":{
+        "tel": "TELEFONOS UTILES",
+        "recep": "Recepción: ",
+        "resto": "Restaurante ",
+        "ext": "Llamadas externas",
+        "rext": "9 y el número deseado",
+        "horarios": "HORARIOS",
+        "lco": "con costo adicional y sujeto a disponibilidad",
+        "des": "Desayuno",
+        "cafe": "Cafetería (Martes a Domingos)",
+        "cena": "Cena",
+        "despierte": "SERVICIO DE DESPIERTE",
+        "rdespierte": "Por favor comuníquese con recepción para informar a qué hora desea que se lo despierte.",
+        "lavanderia": "SERVICIO DE LAVANDERIA",
+        "rlavanderia": "Dentro del placard encontrará una planilla que deberá completar y una bolsa para colocar la ropa.",
+        "wifi": "Wi Fi es sin cargo en todo el Hotel. Solicitar contraseña en recepción. También encontrará dos computadoras de uso libre disponibles en el lobby.",
+        "caja": "CAJA DE SEGURIDAD",
+        "rcaja": "Este servicio no tiene costo adicional. Por favor comuníquese con recepción para utilizar este servicio. <br> 1. Abra la puerta de su caja fuerte y apriete el botón rojo que se encuentra en el marco interior de la puerta de la caja para borrar el código anterior. <br> 2. Mientras la luz amarilla de ‘PROCEED’ se enciende en el frente, seleccionar una clave compuesta por 3 números (del 0 al 9), seguida de la letra (A o B). Tenga en cuenta que para abrir la caja fuerte deberá recordar el código seleccionado. <br> 3. Vuelva a ingresar el código seleccionado para poder girar la perilla hacia la derecha cada vez que desee abrirla. <br> 4.Para cerrar la puerta de la caja fuerte asegúrese de girar la perilla hacia la izquierda. Por favor note que recomendamos hacer una prueba inicial sin guardar ninguna pertenencia para asegurarse que se código ha sido debidamente guardado. <br> 5. No olvide llevarse sus pertenencias al dejar la habitación al finalizar su estadía. Le agradecemos que cortésmente deje la caja fuerte abierta para que el próximo huésped pueda resetearla al ingresar a la habitación siguiendo estas instrucciones.",
+        "masinfo": "Para mayor información, puede encontrar el reglamento de nuestro establecimiento en la puerta de la habitación."
+
+
     }
 }

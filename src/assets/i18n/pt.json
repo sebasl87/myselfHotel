@@ -73,7 +73,8 @@
         "fechas": "Datas:",
         "reci": "Refazer Check In",
         "terminos": "Termos e Condições",
-        "contenido": "Prometo deixar o quarto de hotel no dia da partida mencionado neste documento antes das 10h. No caso de não desocupá-lo voluntariamente, o Hotel tem o direito de remover a bagagem e os pertences encontrados e mantê-la em meu nome. O Hotel não se responsabiliza por roubo, desaparecimento ou dano de objetos de valor, jóias e / ou dinheiro deixado no quarto. <br> Para seu conforto, possui um cofre. A aceitação destes termos e condições é considerada válida para o cupom do cartão de crédito, se gerado pelo hotel, no caso de não pagar todas as despesas geradas durante a minha estadia. <br> Aceito que, de acordo com as políticas do hotel e a portaria municipal nº 354/2005, é estritamente proibido fumar em todas as instalações do hotel, tanto em áreas públicas como na sala. <br> Confirmo que li e li aceite a conformidade com os padrões exigidos pelo Altos Ushuaia Hotel, tomando como referência os protocolos Covid-19 relatados pelas autoridades do governo nacional e provincial para acomodação turística. E seja notificado que, em caso de não conformidade com eles, o hotel reserva-se o direito de admissão e permanência. <br> As informações contidas neste documento são consideradas uma declaração juramentada."
+        "contenido": "Prometo deixar o quarto de hotel no dia da partida mencionado neste documento antes das 10h. No caso de não desocupá-lo voluntariamente, o Hotel tem o direito de remover a bagagem e os pertences encontrados e mantê-la em meu nome. O Hotel não se responsabiliza por roubo, desaparecimento ou dano de objetos de valor, jóias e / ou dinheiro deixado no quarto. <br> Para seu conforto, possui um cofre. A aceitação destes termos e condições é considerada válida para o cupom do cartão de crédito, se gerado pelo hotel, no caso de não pagar todas as despesas geradas durante a minha estadia. <br> Aceito que, de acordo com as políticas do hotel e a portaria municipal nº 354/2005, é estritamente proibido fumar em todas as instalações do hotel, tanto em áreas públicas como na sala. <br> Confirmo que li e li aceite a conformidade com os padrões exigidos pelo Altos Ushuaia Hotel, tomando como referência os protocolos Covid-19 relatados pelas autoridades do governo nacional e provincial para acomodação turística. E seja notificado que, em caso de não conformidade com eles, o hotel reserva-se o direito de admissão e permanência. <br> As informações contidas neste documento são consideradas uma declaração juramentada.",
+        "foto": "Carregar foto do passaporte"
     },
     "MISCONSUMOS":{
         "titulo": "Meus Gastos",
@@ -143,5 +144,28 @@
         "user": "Usuário criado",
         "usersub": "Entre Agora",
         "usermsg": "Por favor, insira suas novas informações."
+    },
+    "INFO":{
+        "tel": "SERVIÇO TELEFÔNICO",
+        "recep": "Recepção: ",
+        "resto": "Restaurante ",
+        "ext": "Número externos",
+        "rext": "disque 9 seguidos pelo número que deseja chamar.",
+        "horarios": "CRONOGRAMA",
+        "lco": "custos adicionais, sujeitos à disponibilidade. Ligue para a recepção..",
+        "des": "Café da manhã",
+        "cafe": "Café / Snack Bar (de terça a domingo)",
+        "cena": "Jantar",
+        "despierte": "SERVIÇO DE CHAMADA DE ACORDO",
+        "rdespierte": "Entre em contato com a recepção para informá-los a que horas você gostaria de ser acordado.",
+        "lavanderia": "SERVIÇO DE LAVANDERIA",
+        "rlavanderia": "Dentro do guarda-roupa, você encontrará um formulário para preencher e um saco plástico para colocar suas roupas.",
+        "wifi": "O acesso Wi-Fi é gratuito no hotel. Entre em contato com a recepção para solicitar a senha. Você também pode encontrar dois computadores na área do lobby para seu uso.",
+        "caja": "CAIXA DE SEGURANÇA",
+        "rcaja": "Este é um serviço gratuito. Para usá-lo, entre em contato com a recepção.<br> Procedimento para definir sua própria senha para usar esta caixa de segurança: <br>1. Abra a porta do cofre e pressione o botão vermelho atrás da porta do cofre para redefinir o código anterior.<br>2. Enquanto a luz amarela de 'PROCEDER' estiver acesa na frente da porta, selecione seu novo código pressionando 3 números (de 0 a 9) seguidos pela letra (A ou B) no teclado.<br>3. Digite o código selecionado para abrir a caixa de segurança durante a sua estadia.<br>4. Agora você pode fechar a trava girando o botão no sentido anti-horário. Observe que, pela primeira vez, recomendamos tentar isso sem introduzir nenhum pertencimento pessoal na caixa de segurança para garantir que seu código tenha sido devidamente registrado.<br>5. Por favor, não esqueça de levar todos os seus pertences pessoais no final da sua estadia. Pedimos a gentileza de deixar a porta da caixa de segurança aberta para que nosso próximo hóspede possa reenviá-la seguindo estas instruções.",
+        "masinfo": "Para mais informações, você pode encontrar as regras do nosso estabelecimento na vizinhança da moradia."
+
+
     }
+
 }

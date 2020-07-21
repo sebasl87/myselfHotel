@@ -119,6 +119,10 @@ export class CheckinPage implements OnInit {
 
     })
   }
+  takePhoto() {
+    this.userSvc.updatePhoto(this.user.uid);
+    // Se guarda 1 foto por UID
+  }
   term() {
     this.modal.create({
       component: TerminosComponent
