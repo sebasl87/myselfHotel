@@ -9,8 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore'
-import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { Facebook } from '@ionic-native/facebook/ngx';
 import { ComponentsModule } from './components/components.module';
 import { IonicStorageModule } from '@ionic/storage';
@@ -51,7 +50,6 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
     Facebook,
-    GooglePlus,
     StatusBar,
     SplashScreen,
     Camera,

@@ -7,7 +7,7 @@ import { auth } from 'firebase';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx'
-// import { GooglePlus } from '@ionic-native/google-plus/ngx';
+
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 

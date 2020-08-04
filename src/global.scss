@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,45 +25,44 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-.icon{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
-.override-default-form-input{
-    width: 100% !important;
-    border: 1px solid #ffe600;
-    border-radius: .5rem;
-    margin-top: 16px;
-
+.override-default-form-input {
+  width: 100% !important;
+  border: 1px solid #ffe600;
+  border-radius: 0.5rem;
+  margin-top: 16px;
 }
 :root {
-    --ion-color-hotel: #5fd1ad;
-    --ion-color-hotel-rgb: 95,209,173;
-    --ion-color-hotel-contrast: #000000;
-    --ion-color-hotel-contrast-rgb: 0,0,0;
-    --ion-color-hotel-shade: #54b898;
-    --ion-color-hotel-tint: #6fd6b5;
-  }
-  .ion-color-hotel {
-    --ion-color-base: var(--ion-color-hotel);
-    --ion-color-base-rgb: var(--ion-color-hotel-rgb);
-    --ion-color-contrast: var(--ion-color-hotel-contrast);
-    --ion-color-contrast-rgb: var(--ion-color-hotel-contrast-rgb);
-    --ion-color-shade: var(--ion-color-hotel-shade);
-    --ion-color-tint: var(--ion-color-hotel-tint);
-  }
-  .tester{
-    text-align: center;
+  --ion-color-hotel: #cc9944;
+  --ion-color-hotel-rgb: 204, 153, 68;
+  --ion-color-hotel-contrast: #000000;
+  --ion-color-hotel-contrast-rgb: 0, 0, 0;
+  --ion-color-hotel-shade: #b4873c;
+  --ion-color-hotel-tint: #d1a357;
+}
+.ion-color-hotel {
+  --ion-color-base: var(--ion-color-hotel);
+  --ion-color-base-rgb: var(--ion-color-hotel-rgb);
+  --ion-color-contrast: var(--ion-color-hotel-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-hotel-contrast-rgb);
+  --ion-color-shade: var(--ion-color-hotel-shade);
+  --ion-color-tint: var(--ion-color-hotel-tint);
+}
+.tester {
+  text-align: center;
 }
 @media (prefers-color-scheme: dark) {
-    :root {
-        --ion-color-hotel: #5fd1ad;
-        --ion-color-hotel-rgb: 95,209,173;
-        --ion-color-hotel-contrast: #000000;
-        --ion-color-hotel-contrast-rgb: 0,0,0;
-        --ion-color-hotel-shade: #54b898;
-        --ion-color-hotel-tint: #6fd6b5;
-    }
+  :root {
+    --ion-color-hotel: #cc9944;
+    --ion-color-hotel-rgb: 204, 153, 68;
+    --ion-color-hotel-contrast: #000000;
+    --ion-color-hotel-contrast-rgb: 0, 0, 0;
+    --ion-color-hotel-shade: #b4873c;
+    --ion-color-hotel-tint: #d1a357;
   }
+}

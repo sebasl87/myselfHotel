@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 491 491" enable-background="new 0 0 491 491" xml:space="preserve">
+<symbol  id="Flecha_24" viewBox="-10.7 -17.9 21.4 35.9">
+	<polygon fill="none" points="-10.7,-17.9 10.7,-17.9 10.7,17.9 -10.7,17.9 	"/>
+	<g>
+		<polygon fill="#1B1D1C" points="-10.7,-17.9 -0.3,0 -10.7,17.9 0.3,17.9 10.7,0 0.3,-17.9 		"/>
+	</g>
+</symbol>
+<g>
+	<circle fill="#CCCCCC" stroke="#000000" stroke-width="10.0576" stroke-miterlimit="10" cx="246.8" cy="246.1" r="232.6"/>
+	<circle fill="#FFFFFF" stroke="#808080" stroke-width="9.1334" stroke-miterlimit="10" cx="246.8" cy="246.1" r="211.2"/>
+	<g>
+		<path d="M83.7,349.9V148.3h49.9l30.1,137.6l29.8-137.6h50.1v201.6h-31.1V191.1l-33,158.8h-32.1l-32.7-158.8v158.8H83.7z"/>
+		<path d="M276.6,349.9V148.3h33.3v79.3h65.6v-79.3h33.3v201.6h-33.3v-88.1h-65.6v88.1H276.6z"/>
+	</g>
+	<rect x="115.6" y="383.5" fill="#808080" width="261.5" height="11.3"/>
+	
+		<use xlink:href="#Flecha_24"  width="21.4" height="35.9" x="-10.7" y="-17.9" transform="matrix(2.302770e-010 -1.8234 -5.129 -8.186400e-011 246.8344 118.5637)" overflow="visible"/>
+	
+		<use xlink:href="#Flecha_24"  width="21.4" height="35.9" x="-10.7" y="-17.9" transform="matrix(2.302770e-010 -1.8234 -5.129 -8.186400e-011 246.8344 88.3908)" overflow="visible"/>
+	<rect x="116.1" y="365.3" fill="#808080" width="261.5" height="11.3"/>
+</g>
+</svg>
