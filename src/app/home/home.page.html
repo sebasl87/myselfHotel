@@ -28,6 +28,10 @@
       <ion-button (click)="onLoginFB()" expand="block" color="primary">{{'HOME.ingresarcon' | translate }} <ion-icon name="logo-facebook">
         </ion-icon>
       </ion-button>
+      <ion-button expand="full" (click)="openAppleSignIn()" *ngIf="showAppleSignIn">
+        <ion-icon name="logo-apple" slot="start"></ion-icon>
+        Sign in with Apple
+      </ion-button>
       <!-- <ion-button (click)="onLoginGoogle()" expand="block" color="success">{{'HOME.ingresarcon' | translate }}<ion-icon name="logo-google">
         </ion-icon>
       </ion-button> -->

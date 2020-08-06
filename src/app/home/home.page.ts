@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { PopoverController } from '@ionic/angular';
 import { LanguageComponent } from '../components/language/language.component';
+import { AlertController } from '@ionic/angular';
+import { Plugins } from '@capacitor/core';
 
+const { Device, SignInWithApple } = Plugins;
 
 @Component({
   selector: 'app-home',
@@ -13,10 +16,41 @@ import { LanguageComponent } from '../components/language/language.component';
 })
 export class HomePage {
   userData: any;
+  showAppleSignIn = false;
+  user = null;
 
-  constructor(private authSvc: AuthService, public afAuth: AngularFireAuth, private router: Router, private popoverCtrl: PopoverController) { }
+  constructor(private authSvc: AuthService, public afAuth: AngularFireAuth, private router: Router, private popoverCtrl: PopoverController, private alertController: AlertController) { }
 
-  async openLanguagePopover(ev){
+  async ngOnInit() {
+
+    const device = await Device.getInfo();
+    this.showAppleSignIn = device.platform === 'ios';
+  }
+
+  openAppleSignIn() {
+    SignInWithApple.Authorize()
+      .then(async (res) => {
+        if (res.response && res.response.identityToken) {
+          this.router.navigateByUrl('home/first');
+        } else {
+          this.presentAlert();
+        }
+      })
+      .catch((response) => {
+        this.presentAlert();
+      });
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Login Failed',
+      message: 'Please try again later',
+      buttons: ['OK'],
+    });
+    await alert.present();
+  }
+
+  async openLanguagePopover(ev) {
     const popover = await this.popoverCtrl.create({
       component: LanguageComponent,
       event: ev,
