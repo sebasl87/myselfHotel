@@ -21,6 +21,7 @@ export class FirstPage implements OnInit {
   ngOnInit() {
     this.authSvc.getUserAuth().subscribe(user => {
       this.uid = user.uid;
+      console.log(this.uid);
       this.primeraVez(this.uid);
     })
   }
@@ -36,18 +37,13 @@ export class FirstPage implements OnInit {
 
   primeraVez(uid) {
     this.userSvc.getOneUser(uid).subscribe(user => {
-      this.hayUsuario = user.dni;
+      this.hayUsuario = user.uid;
       if(this.hayUsuario){
         this.router.navigate(['home/index', uid])
       }
     })
   }
 
-  takePhoto() {
-
-    this.userSvc.updatePhoto(this.uid);
-    // Se guarda 1 foto por UID
-  }
   
   guardarCambios(userForm: NgForm): void {
     
@@ -59,6 +55,7 @@ export class FirstPage implements OnInit {
     userForm.resetForm();
     
   }
+
   salir(){
     this.authSvc.logout();
   }

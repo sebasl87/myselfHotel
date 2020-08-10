@@ -48,10 +48,7 @@ export class UserService {
     }));
   }
 
-  // addUser(uid): void {
-  //   this.db.collection('user').doc(`${uid}`).set({uid: uid})
-    
-  // }
+  
   addUser(user: UserI): void {
     let uid = user.uid;
     this.db.collection('user').doc(`${uid}`).set(user);
