@@ -27,20 +27,7 @@ export class HomePage {
     this.showAppleSignIn = device.platform === 'ios';
   }
 
-  openAppleSignIn() {
-    SignInWithApple.Authorize()
-      .then(async (res) => {
-        if (res.response && res.response.identityToken) {
-          this.router.navigateByUrl('home/first');
-        } else {
-          this.presentAlert();
-        }
-      })
-      .catch((response) => {
-        this.presentAlert();
-      });
-  }
-
+  
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Login Failed',
@@ -49,7 +36,7 @@ export class HomePage {
     });
     await alert.present();
   }
-
+  
   async openLanguagePopover(ev) {
     const popover = await this.popoverCtrl.create({
       component: LanguageComponent,
@@ -58,12 +45,23 @@ export class HomePage {
     });
     await popover.present();
   }
-  // onLoginGoogle(): void {
-  //   this.authSvc.onLoginGoogle()
-  //     .then(res => {
-  //       this.router.navigateByUrl('home/index');
-  //     }).catch(err => alert(err))
-  // }
+
+  openAppleSignIn() {
+    SignInWithApple.Authorize()
+      .then(async (res) => {
+        if (res.response && res.response.identityToken) {
+          this.authSvc.createFirebaseuser(res.response).then(res => {
+            this.router.navigateByUrl('home/first');
+          }).catch(err => alert(err))
+          // this.router.navigateByUrl('home/first');
+        } else {
+          this.presentAlert();
+        }
+      })
+      .catch((response) => {
+        this.presentAlert();
+      });
+  }
 
   onLoginFB() {
     this.authSvc.onLoginFB()

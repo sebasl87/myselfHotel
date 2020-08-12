@@ -16,12 +16,16 @@ export class FirstPage implements OnInit {
   public uid: string;
   public hayUsuario: any;
 
-  constructor(private authSvc: AuthService, private userSvc: UserService, private popoverCtrl: PopoverController, private router: Router) { }
+  constructor(
+    private authSvc: AuthService, 
+    private userSvc: UserService, 
+    private popoverCtrl: PopoverController, 
+    private router: Router) { }
 
   ngOnInit() {
     this.authSvc.getUserAuth().subscribe(user => {
       this.uid = user.uid;
-      console.log(this.uid);
+      // console.log(this.uid);
       this.primeraVez(this.uid);
     })
   }

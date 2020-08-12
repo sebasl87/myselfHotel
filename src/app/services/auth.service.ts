@@ -10,6 +10,7 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx'
 
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { UserService } from './user.service';
 
 
 @Injectable({
@@ -18,8 +19,17 @@ import { Storage } from '@ionic/storage';
 export class AuthService {
 
   public isLogged: any = false;
-  constructor(public afAuth: AngularFireAuth, private router: Router, private db: AngularFirestore, private fb: Facebook, public platform: Platform, private storage: Storage) {
+  constructor(
+    public afAuth: AngularFireAuth, 
+    private router: Router, 
+    private db: AngularFirestore, 
+    private fb: Facebook, 
+    public platform: Platform, 
+    private storage: Storage,
+    private userSvc: UserService) {
+
     afAuth.authState.subscribe(user => (this.isLogged = user));
+  
   }
 
   //REGISTRARSE
@@ -60,16 +70,23 @@ export class AuthService {
     }
   }
 
-  // onLoginGoogle() {
-  //   if (this.platform.is('cordova')) {
-  //     return this.google.login({}).then(result => {
-  //       const user_data_google = result;
-  //       return this.afAuth.signInWithCredential(auth.GoogleAuthProvider.credential(null, user_data_google.accessToken));
-  //     })
-  //   } else {
-  //     return this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
-  //   }
-  // }
+   createFirebaseuser(appleResponse) {
+    // Create a custom OAuth provider    
+    const provider = new auth.OAuthProvider('apple.com');
+ 
+    // Create sign in credentials with our token
+    const credential = provider.credential({
+      idToken: appleResponse.identityToken
+    });
+    
+    // Call the sign in with our created credentials
+    // const userCredential = await 
+    return this.afAuth.signInWithCredential(credential);
+    // console.log(userCredential)
+    // Update the user document in Firestore
+    // this.userSvc.addUserIos(userCredential.user);
+    // this.updateUserData(userCredential.user, appleResponse.givenName, appleResponse.familyName);
+  }
 
   //DATOS USER HOME
 

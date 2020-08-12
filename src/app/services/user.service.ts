@@ -58,6 +58,15 @@ export class UserService {
 
   }
 
+  addUserIos(user): void {
+    let uid = user.uid;
+    this.db.collection('user').doc(`${uid}`).set(user);
+    this.db.collection('user').doc(`${uid}`).update({
+      delete: false
+    });
+
+  }
+
   updateUser(user: UserI): void {
     let uidUser = user.uid;
     this.userDoc = this.db.doc<UserI>(`user/${uidUser}`);

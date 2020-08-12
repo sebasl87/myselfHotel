@@ -13,8 +13,6 @@
 </ion-header>
 <ion-content>
 
-  <form name="userForm" #userForm="ngForm" (ngSubmit)="guardarCambios(userForm)">
-    <input type="hidden" name="uid" [(ngModel)]="uid">
     <ion-card color="hotel" class="ion-margin-vertical">
       <h5 class="ion-padding">{{'INDEX.paso0' | translate }}</h5>
       <ion-card-content class="ion-margin-vertical">
@@ -37,6 +35,8 @@
       </ion-card-content>
     </ion-card>
     <br>
+    <form name="userForm" #userForm="ngForm" (ngSubmit)="guardarCambios(userForm)">
+      <input type="hidden" name="uid" [(ngModel)]="uid">
     <ion-button color="hotel" expand="block" type="ngSubmit" class="ion-margin-bottom">
       {{'INDEX.continuemos' | translate }}</ion-button>
   </form>
