@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "upios": "ionic build && npx cap copy"
+    "upios": "ionic build && npx cap copy",
+    "upandroid": "export JAVA_HOME=`/usr/libexec/java_home -v 1.8` && ionic cordova platform rm android && ionic cordova platform add android@latest && ionic cordova res android && ionic cordova build --release android"
   },
   "private": true,
   "dependencies": {
@@ -39,7 +40,6 @@
     "angularx-qrcode": "^2.3.5",
     "capacitor-apple-login": "git+https://github.com/rlfrahm/capacitor-apple-login.git",
     "capacitor-resources": "^2.0.3",
-    "cordova-android": "^9.0.0",
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.1.0",
     "cordova-plugin-androidx": "^1.0.2",
@@ -75,6 +75,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "cordova-android": "^9.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-splashscreen": "^5.0.2",
@@ -111,7 +112,8 @@
     },
     "platforms": [
       "browser",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
