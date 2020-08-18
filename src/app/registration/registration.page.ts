@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../core/services/auth.service';
 import { Router } from '@angular/router';
-import { User } from '../shared/user.class';
-import { auth } from 'firebase';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -37,6 +35,5 @@ export class RegistrationPage implements OnInit {
       this.router.navigateByUrl('/');
 
     }).catch(err => console.log(err))
-    //HACER LAS COMPROBACIONES DE MAIL y PASS
   }
 }

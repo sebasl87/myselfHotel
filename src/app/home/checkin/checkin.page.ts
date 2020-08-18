@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoadingController, ModalController, AlertController } from '@ionic/angular';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/core/services/user.service';
 import { UserI, BookI } from 'src/app/interfaces/interfaces';
-import { BookService } from 'src/app/services/book.service';
-import { TerminosComponent } from 'src/app/components/terminos/terminos.component';
+import { BookService } from 'src/app/core/services/book.service';
+import { TerminosComponent } from './components/terminos/terminos.component';
 import { FormField } from 'ion-custom-form-builder';
 import { AbstractControl, Validators } from '@angular/forms';
-import { CiService } from 'src/app/services/ci.service';
+import { CiService } from 'src/app/core/services/ci.service';
 import { TranslateService } from '@ngx-translate/core';
 
 

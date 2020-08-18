@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { TranslateModule } from '@ngx-translate/core'; 
 import { HomePageRoutingModule } from './home-routing.module';
-import { LanguageComponent } from '../components/language/language.component';
-import { ComponentsModule } from '../components/components.module';
+import { LanguageComponent } from '../core/header/language/language.component';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -20,7 +20,7 @@ import { ComponentsModule } from '../components/components.module';
     IonicModule,
     HomePageRoutingModule,
     TranslateModule.forChild(),
-    ComponentsModule
+    CoreModule
 
   ],
   declarations: [HomePage]

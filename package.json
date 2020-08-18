@@ -10,8 +10,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+<<<<<<< HEAD
     "upios": "ionic build && npx cap copy",
     "upandroid": "export JAVA_HOME=`/usr/libexec/java_home -v 1.8` && ionic cordova platform rm android && ionic cordova platform add android@latest && ionic cordova res android && ionic cordova build --release android"
+=======
+    "upios": "ionic build && npx cap copy"
+>>>>>>> feature/scalable
   },
   "private": true,
   "dependencies": {
@@ -92,6 +96,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.9.7"
+  },
+  "browser": {
+    "crypto": false
   },
   "description": "An Ionic project",
   "cordova": {

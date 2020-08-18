@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BookService } from 'src/app/services/book.service';
+import { BookService } from 'src/app/core/services/book.service';
 import { BookI } from 'src/app/interfaces/interfaces';
 import { ModalController, LoadingController } from '@ionic/angular';
-import { SaveBookComponent } from 'src/app/components/save-book/save-book.component';
+import { SaveBookComponent } from './components/save-book/save-book.component';
 
 @Component({
   selector: 'app-misreservas',
@@ -13,8 +13,8 @@ import { SaveBookComponent } from 'src/app/components/save-book/save-book.compon
 export class MisreservasPage implements OnInit {
 
   constructor(private route: ActivatedRoute, private bookSvc: BookService, private modal: ModalController, public loadingController: LoadingController) { }
-  
-  
+
+
   public books: BookI[];
   public book: BookI = {};
   public idUser: string;
@@ -44,21 +44,7 @@ export class MisreservasPage implements OnInit {
 
   }
 
-  // modificarRva(book: BookI) {
-  //   this.bookSvc.getOneBook(book.id).subscribe((book) => {
-  //     this.book = book;
-  //     this.modal.create({
-  //       component: SaveBookComponent,
-  //       componentProps: {
-  //         book: this.book
-  //       }
-  //     }).then((modal) => modal.present())
-  //   })
-
-  // }
-
   nuevaRva() {
-    // console.log(this.idUser);
 
     this.modal.create({
       component: SaveBookComponent,

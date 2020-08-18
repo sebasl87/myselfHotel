@@ -7,12 +7,12 @@ import { IonicModule } from '@ionic/angular';
 import { InfoPageRoutingModule } from './info-routing.module';
 
 import { InfoPage } from './info.page';
-import { AvataruserComponent } from 'src/app/components/avataruser/avataruser.component';
-import { SaveBookComponent } from 'src/app/components/save-book/save-book.component';
-import { ComponentsModule } from 'src/app/components/components.module';
+import { AvataruserComponent } from 'src/app/core/header/avataruser/avataruser.component';
+import { SaveBookComponent } from '../misreservas/components/save-book/save-book.component';
+import { CoreModule } from 'src/app/core/core.module';
 import { TranslateModule } from '@ngx-translate/core';
-import { ChatComponent } from 'src/app/components/chat/chat.component';
-import { LanguageComponent } from 'src/app/components/language/language.component';
+import { ChatComponent } from 'src/app/core/footer/chat/chat.component';
+import { LanguageComponent } from 'src/app/core/header/language/language.component';
 
 @NgModule({
   entryComponents: [
@@ -26,7 +26,7 @@ import { LanguageComponent } from 'src/app/components/language/language.componen
     FormsModule,
     IonicModule,
     InfoPageRoutingModule,
-    ComponentsModule,
+    CoreModule,
     TranslateModule.forChild()
   ],
   declarations: [InfoPage]

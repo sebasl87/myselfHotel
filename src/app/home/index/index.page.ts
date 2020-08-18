@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Storage } from '@ionic/storage';
-import { BookService } from 'src/app/services/book.service';
+import { BookService } from 'src/app/core/services/book.service';
 import { BookI } from 'src/app/interfaces/interfaces';
 import { ModalController } from '@ionic/angular';
-import { QrComponent } from 'src/app/components/qr/qr.component';
-import { UserService } from 'src/app/services/user.service';
+import { QrComponent } from '../checkin/components/qr/qr.component';
+import { UserService } from 'src/app/core/services/user.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -64,7 +64,6 @@ export class IndexPage implements OnInit {
     if (this.route.snapshot.params['id']) {
 
       this.uid = this.route.snapshot.params['id'];
-      // this.storage.set('uid', this.uid);
 
       this.bookSvc.bookChecked(this.uid).subscribe(booksch => {
         this.booksCH = booksch
@@ -75,10 +74,6 @@ export class IndexPage implements OnInit {
 
       });
 
-      // this.userSvc.getOneUser(this.uid).subscribe(user => {
-      //   this.foto = user.fotodni;
-      // })
-
     } else {
 
       this.authSvc.getUserAuth().subscribe(user => {
@@ -86,12 +81,6 @@ export class IndexPage implements OnInit {
         this.photo = user.photoURL;
         this.uid = user.uid;
 
-
-        // this.storage.set('uid', user.uid);
-
-        // if (this.userSvc.getOneUser(this.uid) == null) {
-        //   console.log("primera ve");
-        // }
       });
     }
   }
