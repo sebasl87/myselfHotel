@@ -8,8 +8,8 @@ import { FirstPageRoutingModule } from './first-routing.module';
 
 import { FirstPage } from './first.page';
 import { TranslateModule } from '@ngx-translate/core';
-import { ComponentsModule } from 'src/app/components/components.module';
-import { LanguageComponent } from 'src/app/components/language/language.component';
+import { CoreModule } from 'src/app/core/core.module';
+import { LanguageComponent } from 'src/app/core/header/language/language.component';
 
 @NgModule({
   entryComponents: [
@@ -21,7 +21,7 @@ import { LanguageComponent } from 'src/app/components/language/language.componen
     IonicModule,
     FirstPageRoutingModule,
     TranslateModule.forChild(),
-    ComponentsModule
+    CoreModule
   ],
   declarations: [FirstPage]
 })

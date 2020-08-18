@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
-import { UserService } from 'src/app/services/user.service';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { UserService } from 'src/app/core/services/user.service';
 import { NgForm } from '@angular/forms';
 import { PopoverController } from '@ionic/angular';
-import { LanguageComponent } from 'src/app/components/language/language.component';
+import { LanguageComponent } from 'src/app/core/header/language/language.component';
 import { Router } from '@angular/router';
 
 @Component({

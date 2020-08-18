@@ -16,7 +16,6 @@
         <h3>{{'MISRESERVAS.tit' | translate }} {{book.tit}}</h3>
         <p>{{'MISRESERVAS.in' | translate }} {{book.ci.toDate() | date:'dd/MM/yyyy'}} <br> {{'MISRESERVAS.out' | translate }} {{book.co.toDate() | date:'dd/MM/yyyy'}}</p>
       </ion-label>
-      <!-- <ion-icon name="create" slot="end" (click)="modificarRva(book)" color="primary" ></ion-icon> POR EL MOMENTO NO se puede Modificar -->
       <ion-icon name="trash" slot="end" (click)="eliminarRva(book.id)" color="danger" ></ion-icon>
     </ion-item>
   </ion-list>

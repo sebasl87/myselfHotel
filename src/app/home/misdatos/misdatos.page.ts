@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/core/services/user.service';
 import { UserI } from 'src/app/interfaces/interfaces';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController, PopoverController, LoadingController } from '@ionic/angular';
-import { UpdateUserComponent } from '../../components/update-user/update-user.component'
-import { NewAcompComponent } from 'src/app/components/new-acomp/new-acomp.component';
-import { NewAutoComponent } from 'src/app/components/new-auto/new-auto.component';
-import { NgForm } from '@angular/forms';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { NewAcompComponent } from './components/new-acomp/new-acomp.component';
+import { NewAutoComponent } from './components/new-auto/new-auto.component';
+
 
 
 @Component({

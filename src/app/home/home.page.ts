@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../core/services/auth.service';
 import { PopoverController } from '@ionic/angular';
-import { LanguageComponent } from '../components/language/language.component';
+import { LanguageComponent } from '../core/header/language/language.component';
 import { AlertController } from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
 
@@ -58,12 +58,6 @@ export class HomePage {
     });
     await popover.present();
   }
-  // onLoginGoogle(): void {
-  //   this.authSvc.onLoginGoogle()
-  //     .then(res => {
-  //       this.router.navigateByUrl('home/index');
-  //     }).catch(err => alert(err))
-  // }
 
   onLoginFB() {
     this.authSvc.onLoginFB()

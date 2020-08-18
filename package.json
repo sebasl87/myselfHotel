@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "upios": "ionic build && npx cap copy"
   },
   "private": true,
   "dependencies": {
@@ -38,7 +39,6 @@
     "angularx-qrcode": "^2.3.5",
     "capacitor-apple-login": "git+https://github.com/rlfrahm/capacitor-apple-login.git",
     "capacitor-resources": "^2.0.3",
-    "cordova-android": "^9.0.0",
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.1.0",
     "cordova-plugin-androidx": "^1.0.2",
@@ -74,6 +74,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "cordova-android": "^9.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-splashscreen": "^5.0.2",
@@ -90,6 +91,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.9.7"
+  },
+  "browser": {
+    "crypto": false
   },
   "description": "An Ionic project",
   "cordova": {
@@ -110,8 +114,8 @@
     },
     "platforms": [
       "browser",
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

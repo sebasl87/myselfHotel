@@ -3,11 +3,6 @@
     <h2 class="ion-padding" *ngIf="name">{{'INDEX.hola' | translate}} {{name}}!</h2>
     <h2 class="ion-padding" *ngIf="!name">{{'INDEX.continuemos' | translate}} </h2>
     
-    <!-- <ion-item *ngIf="!foto" (click)="takePhoto()">
-        <ion-text color="danger">
-            <h3 class="ion-padding-start">{{'INDEX.xfafoto' | translate }}</h3>
-        </ion-text>
-    </ion-item> -->
     <ion-card *ngIf="booksCH">
         <ion-card-content *ngFor="let bookCH of booksCH">
             <ion-card-title>{{'INDEX.rvaappch' | translate }}</ion-card-title>
@@ -28,7 +23,6 @@
             </ion-item>
         </ion-card-content>
     </ion-card>
-    <!-- *ngIf="!!booksCH?.length == 0 && !!booksOUT?.length == 0"> -->
     <ion-card class="ion-padding" *ngIf="booksCH?.length == 0 && booksOUT?.length == 0">
         <ion-card-title>{{'INDEX.paso0' | translate }}</ion-card-title>
         <ion-card-content>

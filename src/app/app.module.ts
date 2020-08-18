@@ -11,7 +11,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { Facebook } from '@ionic-native/facebook/ngx';
-import { ComponentsModule } from './components/components.module';
+import { CoreModule } from './core/core.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera/ngx';
 import { IonCustomFormBuilderModule } from 'ion-custom-form-builder';
@@ -34,7 +34,7 @@ export function createTranslateLoader(http: HttpClient) {
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    ComponentsModule,
+    CoreModule,
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
