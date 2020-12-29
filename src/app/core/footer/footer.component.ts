@@ -24,13 +24,13 @@ export class FooterComponent implements OnInit {
 
   }
 
-  openChat() {
-    this.modal.create({
-      component: ChatComponent,
-      componentProps: {
-        user: this.hayUID
-      }
-    }).then((modal) => modal.present())
+  // openChat() {
+  //   this.modal.create({
+  //     component: ChatComponent,
+  //     componentProps: {
+  //       user: this.hayUID
+  //     }
+  //   }).then((modal) => modal.present())
 
-  }
+  // }
 }
