@@ -104,7 +104,7 @@
     "NEWRVA":{
         "titulo": "Datos de nueva Reserva",
         "tit": "Titular de la Rva:",
-        "medio": "Compañia:",
+        "medio": "Agencia:",
         "cod":"Código de la Reserva:",
         "in": "Fecha de Ingreso:",
         "out": "Fecha de Salida:",
