@@ -29,12 +29,7 @@
 			</array>
 		</dict>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>FacebookAppID</key>
-	<string>272390784104515</string>
-	<key>FacebookDisplayName</key>
-	<string>ionic.altosMyself</string>
+	
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

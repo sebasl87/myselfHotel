@@ -25,16 +25,11 @@
       <span class="already">{{'HOME.yasos' | translate }}</span>
 
       <ion-button [routerLink]="['/login']" expand="block" color="danger">{{'HOME.ingresar' | translate }}</ion-button>
-      <ion-button (click)="onLoginFB()" expand="block" color="primary">{{'HOME.ingresarcon' | translate }} <ion-icon name="logo-facebook">
-        </ion-icon>
-      </ion-button>
+
       <ion-button expand="block" (click)="openAppleSignIn()" color="dark" *ngIf="showAppleSignIn">
         <ion-icon name="logo-apple" slot="start"></ion-icon>
         Sign in with Apple
       </ion-button>
-      <!-- <ion-button (click)="onLoginGoogle()" expand="block" color="success">{{'HOME.ingresarcon' | translate }}<ion-icon name="logo-google">
-        </ion-icon>
-      </ion-button> -->
 
     </ion-card-content>
   </ion-card>

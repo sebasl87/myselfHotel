@@ -10,7 +10,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { Facebook } from '@ionic-native/facebook/ngx';
+
 import { ComponentsModule } from './components/components.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera/ngx';
@@ -49,7 +49,7 @@ export function createTranslateLoader(http: HttpClient) {
     IonCustomFormBuilderModule.forRoot({ defaultCssClass: 'override-default-form-input' })
   ],
   providers: [
-    Facebook,
+
     StatusBar,
     SplashScreen,
     Camera,

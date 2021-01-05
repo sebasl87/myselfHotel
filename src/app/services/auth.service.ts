@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { auth } from 'firebase';
 
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx'
+
 
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
@@ -23,7 +23,6 @@ export class AuthService {
     public afAuth: AngularFireAuth, 
     private router: Router, 
     private db: AngularFirestore, 
-    private fb: Facebook, 
     public platform: Platform, 
     private storage: Storage,
     private userSvc: UserService) {
@@ -59,16 +58,16 @@ export class AuthService {
     });
   }
 
-  onLoginFB() {
-    if (this.platform.is('cordova')) {
-      return this.fb.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
-        const credential_fb = auth.FacebookAuthProvider.credential(response.authResponse.accessToken);
-        return this.afAuth.signInWithCredential(credential_fb);
-      })
-    } else {
-      return this.afAuth.signInWithPopup(new auth.FacebookAuthProvider());
-    }
-  }
+  // onLoginFB() {
+  //   if (this.platform.is('cordova')) {
+  //     return this.fb.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
+  //       const credential_fb = auth.FacebookAuthProvider.credential(response.authResponse.accessToken);
+  //       return this.afAuth.signInWithCredential(credential_fb);
+  //     })
+  //   } else {
+  //     return this.afAuth.signInWithPopup(new auth.FacebookAuthProvider());
+  //   }
+  // }
 
    createFirebaseuser(appleResponse) {
     // Create a custom OAuth provider    
@@ -98,7 +97,7 @@ export class AuthService {
 
   logout() {
     this.afAuth.signOut().then(() => {
-      this.fb.logout();
+      // this.fb.logout();
       this.storage.clear();
       this.router.navigateByUrl('/');
     })
