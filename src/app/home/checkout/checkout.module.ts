@@ -12,7 +12,7 @@ import { SaveBookComponent } from 'src/app/components/save-book/save-book.compon
 import { ComponentsModule } from 'src/app/components/components.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonCustomFormBuilderModule } from 'ion-custom-form-builder';
-import { ChatComponent } from 'src/app/components/chat/chat.component';
+
 import { LanguageComponent } from 'src/app/components/language/language.component';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { LanguageComponent } from 'src/app/components/language/language.componen
     AvataruserComponent,
     SaveBookComponent,
     LanguageComponent,
-    ChatComponent
+    
   ],
   imports: [
     CommonModule,

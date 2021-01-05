@@ -16,7 +16,6 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageComponent } from './language/language.component';
 import { FooterComponent } from './footer/footer.component';
-import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -31,9 +30,7 @@ import { ChatComponent } from './chat/chat.component';
     TerminosComponent,
     QrComponent,
     LanguageComponent,
-    FooterComponent,
-    ChatComponent
-
+    FooterComponent
   ],
   exports: [
     AvataruserComponent,
@@ -46,8 +43,7 @@ import { ChatComponent } from './chat/chat.component';
     TerminosComponent,
     QrComponent,
     LanguageComponent,
-    FooterComponent,
-    ChatComponent
+    FooterComponent
   ],
   imports: [
     CommonModule,

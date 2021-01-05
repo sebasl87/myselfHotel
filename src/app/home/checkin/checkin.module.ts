@@ -10,7 +10,6 @@ import { TerminosComponent } from 'src/app/components/terminos/terminos.componen
 import { IonCustomFormBuilderModule } from 'ion-custom-form-builder';
 import { QRCodeModule } from 'angularx-qrcode';
 import { TranslateModule } from '@ngx-translate/core';
-import { ChatComponent } from 'src/app/components/chat/chat.component';
 import { LanguageComponent } from 'src/app/components/language/language.component';
 
 
@@ -18,8 +17,7 @@ import { LanguageComponent } from 'src/app/components/language/language.componen
   entryComponents: [
     AvataruserComponent,
     TerminosComponent,
-    LanguageComponent,
-    ChatComponent
+    LanguageComponent
   ],
   imports: [
     CommonModule,
